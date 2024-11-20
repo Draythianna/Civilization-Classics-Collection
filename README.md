@@ -107,7 +107,7 @@ CivFantatics the NamelessOne
 https://forums.civfanatics.com/threads/the-test-of-time-patch-project.517282/
 
 CivFantatics FoxAhead
-https://forums.civfanatics.com/threads/the-test-of-time-patch-project.517282/
+https://forums.civfanatics.com/threads/civilization-ii-mge-user-interface-additions-civ2uia.623515/
 
 CivFanatics duplj
 https://forums.civfanatics.com/threads/civ2-mge-several-fixes-and-additions-with-support-for-music-tracks.688546/
