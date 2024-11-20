@@ -135,10 +135,15 @@ https://sourceforge.net/p/dxwnd/discussion/general/thread/f77b08a057/
 
 InnoSetup Installer resources:
 https://jrsoftware.org/isinfo.php
+
 https://www.innoscriptstudio.com/
+
 https://softwarelode.com/9043/details-issi.html
 
 Special Thanks to:
+
 https://stackoverflow.com/
+
 and
-AI coding search engines
+
+Any AI coding search engines!
