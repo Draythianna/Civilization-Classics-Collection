@@ -104,36 +104,46 @@ Enjoy, special thanks to Apolyton.net, CivFanatics, and all the digital archives
 # Credits
 
 CivFantatics the NamelessOne
+
 https://forums.civfanatics.com/threads/the-test-of-time-patch-project.517282/
 
 CivFantatics FoxAhead
+
 https://forums.civfanatics.com/threads/civilization-ii-mge-user-interface-additions-civ2uia.623515/
 
 CivFanatics duplj
+
 https://forums.civfanatics.com/threads/civ2-mge-several-fixes-and-additions-with-support-for-music-tracks.688546/
 
 Otya128, OTDVM Project:
+
 https://github.com/otya128/winevdm
 
 LAME mp3 Project:
+
 https://lame.sourceforge.io/
 
 XDelta Project:
+
 https://www.pcgamingwiki.com/wiki/Xdelta
 
 PeaZip (Archive Extractor with commandline support for ISOs):
+
 https://peazip.github.io/
 
 i5Comp (Installshield 5 commandline extractor):
+
 https://archive.org/download/InstallShieldTools
 
 BinChunker (Converts archives to ISO and wav for music tracks):
 https://github.com/extramaster/bchunk
 
 Indeo codec powershell script (Powershell Indeo Video Reactivator for Windows 8 and above):
+
 https://sourceforge.net/p/dxwnd/discussion/general/thread/f77b08a057/
 
 InnoSetup Installer resources:
+
 https://jrsoftware.org/isinfo.php
 
 https://www.innoscriptstudio.com/
