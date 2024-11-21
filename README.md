@@ -1,4 +1,5 @@
 # Civilization-Classics-Collection
+
 Civilization Classic Collection Extractor and Installer Sid Meier's Civilization 1 through Civilization II: Test of Time
 
 While I easily could have just released a basic installer, to keep legality this one uses images, archives or actual original cdroms and is very comprehensive. While a lot of the modern fixes work was done by many other talented modders, they will be credited (incoming).
@@ -99,7 +100,16 @@ Lastly the optional extras, including pdf docs and non duplicated original mod a
 Installer will quit, and you are ready to play, using shortcuts on your desktop or start menu!
 
 # Done
+
 Enjoy, special thanks to Apolyton.net, CivFanatics, and all the digital archives on Archive.org!
+
+# Upcomming Plans
+
+-Split the Installer extras up better
+
+-make a mod section for popular TC mods for civ1
+
+-Split the nocd section up better so it doesn't install modern mods by default
 
 # Credits
 
