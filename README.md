@@ -119,7 +119,7 @@ https://forums.civfanatics.com/threads/the-test-of-time-patch-project.517282/
 
 CivFantatics FoxAhead
 
-https://forums.civfanatics.com/threads/civilization-ii-mge-user-interface-additions-civ2uia.623515/
+https://forums.civfanatics.com/threads/civilization-ii-mge-user-interface-additions-civ2uia.697565/
 
 CivFanatics duplj
 
