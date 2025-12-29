@@ -422,18 +422,18 @@ Filename: "{commonappdata}\Temp\CivTemp\7z.exe"; Parameters: "x ""{src}\CivWin_P
 Filename: "{commonappdata}\Temp\CivTemp\7z.exe"; Parameters: "x ""{src}\HiResv24.7z"" -o""{app}\Civilization II Multiplayer Gold Edition\"" -y"; Flags: runhidden waituntilterminated postinstall; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ2\HiRes') and FileExists(ExpandConstant('{src}\HiResv24.7z'))
 
 ; ============================
-; MGEgfx.zip → Civ2 MGE
+; MGEgfx.zip → Test of Time
 ; ============================
-Filename: "{commonappdata}\Temp\CivTemp\7z.exe"; Parameters: "x ""{src}\MGEgfx.zip"" -o""{app}\Civilization II Multiplayer Gold Edition\"" -y"; Flags: runhidden waituntilterminated postinstall; Check: IsComponentSelected('Common\Tasks\Update\Mods\CivTot\MGEGfx') and FileExists(ExpandConstant('{src}\MGEgfx.zip'))
+Filename: "{commonappdata}\Temp\CivTemp\7z.exe"; Parameters: "x ""{src}\MGEgfx.zip"" -o""{app}\Test of Time\"" -y"; Flags: runhidden waituntilterminated postinstall; Check: IsComponentSelected('Common\Tasks\Update\Mods\CivTot\MGEGfx') and FileExists(ExpandConstant('{src}\MGEgfx.zip'))
 ; ============================
 ; SCENARIO pack → Test of Time
 ; ============================
-Filename: "{commonappdata}\Temp\CivTemp\7z.exe"; Parameters: "x ""{src}\BESTONETX.7z"" -o""{app}\Test of Time\"" -y"; Flags: runhidden waituntilterminated postinstall; Description: "Install Civ2TOT Scenarios"; Check: IsComponentSelected('Common\Tasks\Update\Scenarios\CivToT') and FileExists(ExpandConstant('{src}\BESTONETX.7z'))
+Filename: "{commonappdata}\Temp\CivTemp\7z.exe"; Parameters: "x ""{src}\BESTONETX.7z"" -o""{app}\Test of Time\BESTONETX\"" -y"; Flags: waituntilterminated postinstall; Description: "Install Civ2TOT Scenarios"; Check: IsComponentSelected('Common\Tasks\Update\Scenarios\CivToT') and FileExists(ExpandConstant('{src}\BESTONETX.7z'))
 
 ; ============================
 ; SCENARIO pack → Civ II MGE
 ; ============================
-Filename: "{commonappdata}\Temp\CivTemp\7z.exe"; Parameters: "x ""{src}\SCENARIO.7z"" -o""{app}\Civilization II Multiplayer Gold Edition"" -y"; Flags: runhidden waituntilterminated postinstall; Description: "Install Civ2MGE Scenarios"; Check: IsComponentSelected('Common\Tasks\Update\Scenarios\Civ2') and FileExists(ExpandConstant('{src}\SCENARIO.7z'))
+Filename: "{commonappdata}\Temp\CivTemp\7z.exe"; Parameters: "x ""{src}\SCENARIO.7z"" -o""{app}\Civilization II Multiplayer Gold Edition\SCENARIO\"" -y"; Flags: waituntilterminated postinstall; Description: "Install Civ2MGE Scenarios"; Check: IsComponentSelected('Common\Tasks\Update\Scenarios\Civ2') and FileExists(ExpandConstant('{src}\SCENARIO.7z'))
 
 [INI]
 Filename: "{commonappdata}\Temp\CivTemp\Setup.ini"; Section: "Install"; Key: "Civ1ISO"; String: "{code:GetCiv1ISO}"
