@@ -1,4 +1,4 @@
-@echo off
+@echo on
 setlocal EnableExtensions EnableDelayedExpansion
 
 REM ===============================================
@@ -42,6 +42,7 @@ if exist "%civmain%\x86\lame.exe" set "LAME=%civmain%\x86\lame.exe"
 
 cd \
 if exist "%CivPath%\common\FULL.TXT" goto full
+cd %civmain%
 goto multi
 
 :full
@@ -75,7 +76,7 @@ cd\
 echo A | %civmain%\7z.exe e 90936-tot_corrected_dlls.rar -o"%CivPath%\Test of Time\"
 echo A | %civmain%\7z.exe x TOTPPv018.4.zip -o"%CivPath%\Test of Time\"
 rd /s /q "%CivPath%\Test of Time\ToT corrected DLLs\"
-echo A | %civmain%\7z.exe x ExtendedMusic.7z.exe -o"%CivPath%\Test of Time\"
+echo A | %civmain%\7z.exe x ExtendedMusic.7z -o"%CivPath%\Test of Time\"
 cd "%CivPath%\Test of Time"
 %XDELTA_EXE% -v -v -f -d -s civ2.exe "%civmain%\totpatched64.diff" civ2.x64.exe 
 %XDELTA_EXE% -v -v -f -d -s civ2.exe "%civmain%\civ2tot.diff" civ2.fixes.exe
@@ -86,6 +87,7 @@ goto end
 :multi
 if exist "%CivPath%\common\CIV2MGE.TXT" goto mge
 :mge
+cd %civmain%
 echo A | %civmain%\7z.exe x civ2xp64patcher.zip -o"%CivPath%\Civilization II Multiplayer Gold Edition\"
 echo A | %civmain%\7z.exe x Civ2UIA.v1.21.5.2785.zip -o"%CivPath%\Civilization II Multiplayer Gold Edition\"
 echo A | %civmain%\7z.exe x civ2patch-v1.01a.zip -o"%CivPath%\Civilization II Multiplayer Gold Edition\"
@@ -113,10 +115,11 @@ goto multi2
 if exist "%CivPath%\common\CIV2TOT.TXT" goto tot
 goto end
 :tot
+cd %civmain%
 echo A | %civmain%\7z.exe e 90936-tot_corrected_dlls.rar -o"%CivPath%\Test of Time\"
 echo A | %civmain%\7z.exe x TOTPPv018.4.zip -o"%CivPath%\Test of Time\"
 rd /s /q "%CivPath%\Test of Time\ToT corrected DLLs\"
-echo A | %civmain%\7z.exe x ExtendedMusic.7z.exe -o"%CivPath%\Test of Time\"
+echo A | %civmain%\7z.exe x ExtendedMusic.7z -o"%CivPath%\Test of Time\"
 cd "%CivPath%\Test of Time"
 %XDELTA_EXE% -v -v -f -d -s civ2.exe "%civmain%\civ2tot.diff" civ2.fixes.exe
 %XDELTA_EXE% -v -v -f -d -s civ2.exe "%civmain%\civ2tot.diff" civ2.fixes.exe

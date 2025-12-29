@@ -81,7 +81,7 @@ cd totpatch
 mkdir out
 cd out
 %civmain%\i5comp x ..\data1.cab
-echo A | xcopy /S /C /H /R /Y *.* "%CivPath%\Test of Time" 
+xcopy /S /C /H /R /Y *.* "%CivPath%\Test of Time" 
 cd \
 pushd "%CIVMAIN%" || exit /b 1
 echo A | %civmain%\7z.exe e totTTP.7z -o%civmain%\totTTP
