@@ -1,9 +1,20 @@
 @echo off
-set civmain=%localappdata%\Temp\CivTemp\
-cd %civmain%
-for /F "tokens=*" %%i in (Setup.ini) do set %%i
+setlocal EnableExtensions EnableDelayedExpansion
+
+REM ===============================================
+REM Civilization Classics Collection - extra.bat
+REM ===============================================
+
+set "CIVMAIN=%ProgramData%\Temp\CivTemp"
+for /f "usebackq delims=" %%i in ("%CIVMAIN%\Setup.ini") do set "%%i"
+
+:main
+set "civmain=%CIVMAIN%"
+cls
+
 mkdir "%CivPath%\common\extras"
 echo a | %civmain%\7z x extras.7z -o"%CivPath%\common\extras"
 echo Extra's Installed...
+
 timeout 5
-exit
+exit /b 0

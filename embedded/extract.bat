@@ -1,11 +1,56 @@
 @echo off
-REM setlocal enabledelayedexpansion
-cd %localappdata%\TEMP\CivTemp
-for /F "tokens=*" %%i in (Setup.ini) do set %%i
-set civmain=%localappdata%\TEMP\CivTemp
+setlocal EnableExtensions EnableDelayedExpansion
+
+REM ===============================================
+REM Civilization Classics Collection - extract.bat
+REM ===============================================
+
+set "CIVMAIN=%ProgramData%\Temp\CivTemp"
+for /f "usebackq delims=" %%i in ("%CIVMAIN%\Setup.ini") do set "%%i"
+
+REM --------------------------------------------------
+REM Select LAME (x64 vs x86)
+REM   Prefers x64 on 64-bit Windows when available.
+REM   Falls back to x86 if needed.
+REM --------------------------------------------------
+set "LAME="
+set "LAME64=%CIVMAIN%\x64\lame.exe"
+set "LAME86=%CIVMAIN%\x86\lame.exe"
+
+REM Detect OS bitness safely
+set "IS64=0"
+if defined PROCESSOR_ARCHITEW6432 set "IS64=1"
+if /I "%PROCESSOR_ARCHITECTURE%"=="AMD64" set "IS64=1"
+if /I "%PROCESSOR_ARCHITECTURE%"=="ARM64" set "IS64=1"
+if exist "%CivPath%\common\force32.txt" set "IS64=0"
+
+if "%IS64%"=="1" (
+  if exist "%LAME64%" (
+    set "LAME=%LAME64%"
+  ) else if exist "%LAME86%" (
+    set "LAME=%LAME86%"
+  )
+) else (
+  if exist "%LAME86%" (
+    set "LAME=%LAME86%"
+  )
+)
+
+if not defined LAME (
+  echo "ERROR: lame.exe not found. Expected %LAME64% or %LAME86%"
+  exit /b 1
+)
+
+echo "Using LAME: %LAME%"
+
+
+:main
+set "civmain=%CIVMAIN%"
+cls
+
 cd "%civmain%"
 set drive=
-clear
+cls
 if exist "%CivPath%\common\FULL.TXT" goto civ1
 if exist "%CivPath%\common\CIV1.TXT" goto civ1
 if exist "%CivPath%\common\CIVNET.TXT" goto civnet
@@ -34,7 +79,7 @@ cd "%CivPath%\CIVWIN"
 mkdir TMP
 cd TMP
 %civmain%\bchunk.v1.2.1_repub.1.exe -w "%CDBIN%" "%CDCUE%" TRACK
-for %%i in (*.wav) do %civmain%\lame.exe -b 320 -h %%i %%~ni.mp3
+for %%i in (*.wav) do %civmain%\%lame%-b 320 -h %%i %%~ni.mp3
 echo a | %civmain%\7z.exe x TRACK01.iso
 echo a | %civmain%\7z.exe x "%drive%"
 cd CivWin3.1
@@ -100,7 +145,7 @@ cd "%CivPath%\CIVNET"
 mkdir TMP
 cd TMP
 %civmain%\bchunk.v1.2.1_repub.1.exe -w "%CDBIN%" "%CDCUE%" TRACK
-for %%i in (*.wav) do %civmain%\lame.exe -b 320 -h %%i %%~ni.mp3
+for %%i in (*.wav) do %civmain%\%lame%-b 320 -h %%i %%~ni.mp3
 mkdir ..\Music
 move *.wav ..\Music
 echo a | %civmain%\7z.exe x TRACK01.iso
@@ -193,7 +238,7 @@ move TRACK09.wav2 TRACK08.wav
 move TRACK10.wav2 TRACK09.wav
 move TRACK11.wav2 TRACK10.wav
 move TRACK12.wav2 TRACK11.wav
-for %%i in (*.wav) do %civmain%\lame.exe -b 320 -h %%i %%~ni.mp3
+for %%i in (*.wav) do %civmain%\%lame%-b 320 -h %%i %%~ni.mp3
 mkdir ..\Music
 move *.wav ..\Music
 echo a | %civmain%\7z.exe x TRACK01.iso
@@ -250,7 +295,7 @@ cd "%CivPath%\Test of Time"
 mkdir TMP
 cd TMP
 %civmain%\bchunk.v1.2.1_repub.1.exe -w "%CDBIN%" "%CDCUE%" TRACK
-for %%i in (*.wav) do %civmain%\lame.exe -b 320 -h %%i %%~ni.mp3
+for %%i in (*.wav) do %civmain%\%lame%-b 320 -h %%i %%~ni.mp3
 del TRACK*.wav
 echo a | %civmain%\7z.exe x TRACK01.iso
 cd ..
@@ -295,10 +340,10 @@ set drive=%CivToTData%
 goto civtb
 
 :final
-if exist "%CivPath%\Civilization II Multiplayer Gold Edition" cd "%CivPath%\Civilization II Multiplayer Gold Edition\Music" && for %%i in (*.mp3) do %civmain%\lame.exe --decode %%i %%~ni.wav
+if exist "%CivPath%\Civilization II Multiplayer Gold Edition" cd "%CivPath%\Civilization II Multiplayer Gold Edition\Music" && for %%i in (*.mp3) do "%lame%" --decode "%%i" "%%~ni.wav"
 
 cd /
 cd "%civmain%"
 echo Extraction done...
 timeout 10
-exit
+exit /b 0

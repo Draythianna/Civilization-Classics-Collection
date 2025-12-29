@@ -2,9 +2,11 @@
 
 Civilization Classic Collection Extractor and Installer Sid Meier's Civilization 1 through Civilization II: Test of Time
 
-While I easily could have just released a basic installer, to keep legality this one uses images, archives or actual original cdroms and is very comprehensive. While a lot of the modern fixes work was done by many other talented modders, they will be credited (incoming).
+While I easily could have just released a basic installer, to keep legality, this one uses images, archives, or actual original cdroms and is very comprehensive. While a lot of the modern fixes work was done by many other talented modders, they will be credited (incoming).
 
-To give you the scope of this project there were an agonizing 8224 lines of code, 394 files, 42 folders, and 300 MB of data. It includes a scripted Indeo Fix, 64bit fixes, the Civ2 UI Additions, Civ2 Music fix, Test of Time Patch Project, the Test of Time official addon scenario "Time Threat Paradox", multiple fixes and choices after the original patches are applied. And backs up critical files. This is a WIP. The installer would have been only 30mb had I not included the extras and documentations, so feedback on that or whatever else is welcome, bring it up in Issues.
+To give you the scope of this project, there were an agonizing 8224 lines of code, 394 files, 42 folders, and 300 MB of data. It includes a scripted Indeo Fix, 64bit fixes, the Civ2 UI Additions, Civ2 Music fix, Test of Time Patch Project, the Test of Time official addon scenario "Time Threat Paradox", multiple fixes, and choices after the original patches are applied. And backs up critical files. This is a WIP. The installer would have been only 30mb had I not included the extras and documentation, so feedback on that or whatever else is welcome; bring it up in Issues.
+
+When I first began this project at the end of 2024, AI search engines were still in their infancy (I could only look up a topic for one problem at a time), ChatGPT, for example, is able to help improve stability for my existing code and can rewrite parts of code automatically.  The majority of the code is still my creation; this just improves stability, streamlines, and prevents issues from before, hopefully.
 
 # This Collection Includes:
 
@@ -167,4 +169,4 @@ https://stackoverflow.com/
 
 and
 
-Any AI coding search engines!
+Any AI coding search engines + code checking/conversion/creation ai software!

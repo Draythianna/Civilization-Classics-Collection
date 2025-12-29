@@ -1,23 +1,65 @@
 @echo off
-cd %localappdata%\Temp\CivTemp
-for /F "tokens=*" %%i in (Setup.ini) do set %%i
+setlocal EnableExtensions EnableDelayedExpansion
+
+REM ===============================================
+REM Civilization Classics Collection - patch.bat
+REM ===============================================
+
+set "CIVMAIN=%ProgramData%\Temp\CivTemp"
+for /f "usebackq delims=" %%i in ("%CIVMAIN%\Setup.ini") do set "%%i"
+
+REM --------------------------------------------------
+REM Select LAME (x64 vs x86)
+REM   Prefers x64 on 64-bit Windows when available.
+REM   Falls back to x86 if needed.
+REM --------------------------------------------------
+set "LAME="
+set "LAME64=%CIVMAIN%\x64\lame.exe"
+set "LAME86=%CIVMAIN%\x86\lame.exe"
+
+REM Detect OS bitness safely
+set "IS64=0"
+if defined PROCESSOR_ARCHITEW6432 set "IS64=1"
+if /I "%PROCESSOR_ARCHITECTURE%"=="AMD64" set "IS64=1"
+if /I "%PROCESSOR_ARCHITECTURE%"=="ARM64" set "IS64=1"
+if exist "%CivPath%\common\force32.txt" set "IS64=0"
+
+if "%IS64%"=="1" (
+  if exist "%LAME64%" (
+    set "LAME=%LAME64%"
+  ) else if exist "%LAME86%" (
+    set "LAME=%LAME86%"
+  )
+) else (
+  if exist "%LAME86%" (
+    set "LAME=%LAME86%"
+  )
+)
+
+if not defined LAME (
+  echo "ERROR: lame.exe not found. Expected %LAME64% or %LAME86%"
+  exit /b 1
+)
+
+echo "Using LAME: %LAME%"
+
+:main
+set "civmain=%CIVMAIN%"
 cd \
-set civmain=%localappdata%\Temp\CivTemp
-cd %civmain%
 if exist "%CivPath%\common\FULL.TXT" goto FULL
 
 if exist "%CivPath%\common\CIV1.TXT" (echo a | %civmain%\7z.exe e "%civmain%\Sid-Meiers-Civilization_Patch_Win-3x_EN.zip" -o"%CivPath%\CIVWIN" && rd /s /q "%CivPath%\CIVWIN\Civilization_Win_upgrade_v1.2")
 cd \
-cd %civmain%
+pushd "%CIVMAIN%" || exit /b 1
 if exist "%CivPath%\common\CIVNET.TXT" (echo a | %civmain%\7z.exe e "%civmain%\Sid-Meiers-CivNet_Patch_Win-3x_EN_Patch-13.zip" -o"%CivPath%\CIVNET" && rd /s /q "%CivPath%\CIVNET\Sid_Meiers_Civnet_patch_13")
 cd \
-cd %civmain%
+pushd "%CIVMAIN%" || exit /b 1
 if exist "%CivPath%\common\CIV2MGE.TXT" (echo a | %civmain%\7z.exe e mgepatch.7z -o%civmain%\mgepatch && cd mgepatch && mkdir out && cd out && %civmain%\i5comp x ..\data1.cab && xcopy /S /C /H /R /Y *.* "%CivPath%\Civilization II Multiplayer Gold Edition")
 cd \
-cd %civmain%
+pushd "%CIVMAIN%" || exit /b 1
 if exist "%CivPath%\common\CIV2TOT.TXT" (echo a | %civmain%\7z.exe e totpatch.7z -o%civmain%\totpatch && cd totpatch && mkdir out && cd out && %civmain%\i5comp x ..\data1.cab && xcopy /S /C /H /R /Y *.* "%CivPath%\Test of Time")
 cd \
-cd %civmain%
+pushd "%CIVMAIN%" || exit /b 1
 if exist "%CivPath%\common\CIV2TOT.TXT" (echo a | %civmain%\7z.exe e totTTP.7z -o%civmain%\totTTP && cd totTTP && mkdir out && cd out && %civmain%\i5comp x ..\data1.cab && xcopy /S /C /H /R /Y *.* "%CivPath%\Test of Time")
 goto END
 
@@ -33,7 +75,7 @@ cd out
 %civmain%\i5comp x ..\data1.cab
 xcopy /S /C /H /R /Y *.* "%CivPath%\Civilization II Multiplayer Gold Edition"
 cd \
-cd %civmain%
+pushd "%CIVMAIN%" || exit /b 1
 echo a | %civmain%\7z.exe e totpatch.7z -o%civmain%\totpatch
 cd totpatch
 mkdir out
@@ -41,7 +83,7 @@ cd out
 %civmain%\i5comp x ..\data1.cab
 echo a | xcopy /S /C /H /R /Y *.* "%CivPath%\Test of Time" 
 cd \
-cd %civmain%
+pushd "%CIVMAIN%" || exit /b 1
 echo a | %civmain%\7z.exe e totTTP.7z -o%civmain%\totTTP
 cd totTTP
 mkdir out
@@ -49,15 +91,14 @@ cd out
 %civmain%\i5comp x ..\data1.cab
 xcopy /S /C /H /R /Y *.* "%CivPath%\Test of Time"
 cd \
-cd %civmain%
+pushd "%CIVMAIN%" || exit /b 1
 goto END
 
 :END
 if exist "%CivPath%\common\PATCH.TXT" goto QUIT
 echo Done Installing Patches
 timeout 10
-exit
-
+exit /b 0
 :QUIT
 echo Upgrading Music.....
 timeout 5
@@ -87,8 +128,8 @@ if exist "%CivPath%\Civilization II Multiplayer Gold Edition" Powershell -Comman
 if exist "%CivPath%\Civilization II Multiplayer Gold Edition" Powershell -Command Invoke-WebRequest -Uri 'https://github.com/ProfGarfield/ExtendedMusicForTOTPP/raw/main/Music/The%%20Great%%20War.mp3' -OutFile '%CivPath%\Civilization II Multiplayer Gold Edition\Music\TRACK21.mp3'
 if exist "%CivPath%\Civilization II Multiplayer Gold Edition" Powershell -Command Invoke-WebRequest -Uri 'https://github.com/ProfGarfield/ExtendedMusicForTOTPP/raw/main/Music/The%%20Shining%%20Path.mp3' -OutFile '%CivPath%\Civilization II Multiplayer Gold Edition\Music\TRACK22.mp3'
 
-if exist "%CivPath%\Civilization II Multiplayer Gold Edition" cd "%CivPath%\Civilization II Multiplayer Gold Edition\Music" && for %%i in (*.mp3) do %civmain%\lame.exe --decode %%i %%~ni.wav
+if exist "%CivPath%\Civilization II Multiplayer Gold Edition" cd "%CivPath%\Civilization II Multiplayer Gold Edition\Music" && for %%i in (*.mp3) do "%LAME%" --decode "%%i" "%%~ni.wav"
 
 echo Done Installing Patches...
 timeout 10
-exit
+exit /b 0
