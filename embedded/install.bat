@@ -42,10 +42,10 @@ if exist "%civmain%\x86\lame.exe" set "LAME=%civmain%\x86\lame.exe"
 
 cd \
 if exist "%CivPath%\common\FULL.TXT" goto full
-cd %civmain%
 goto multi
 
 :full
+cd %civmain%
 %civmain%\7z.exe x civ2xp64patcher.zip -o"%CivPath%\Civilization II Multiplayer Gold Edition\" -y
 %civmain%\7z.exe x Civ2UIA.v1.21.5.2785.zip -o"%CivPath%\Civilization II Multiplayer Gold Edition\" -y
 %civmain%\7z.exe x civ2patch-v1.01a.zip -o"%CivPath%\Civilization II Multiplayer Gold Edition\" -y
