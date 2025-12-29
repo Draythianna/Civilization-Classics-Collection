@@ -28,7 +28,7 @@ In order to use this installer, you will need archives, disc image files, or it 
 
 <img src="https://github.com/user-attachments/assets/3415bbc2-441e-4f7b-91f4-c62631de2ed0" width="400">
 
-Just remember to select the options here:
+**Just remember to select the options here later in installer:**
 
 <img src="https://github.com/user-attachments/assets/4ff2b005-a99d-49ea-82af-8f299f48fd83" width="400">
  
