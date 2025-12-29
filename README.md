@@ -20,9 +20,17 @@ Sid Meier's Civilization Test of Time
 
 # Installer Walkthrough (with Pictures)
 
-In order to use this installer you will need archives, disc image files, or it should work with the actual discs if your computer can attach a disc drive, Something like this works:
+In order to use this installer you will need archives, disc image files, or it should work with the actual discs if your computer can attach a disc drive, internet if you want extra music tracks for mge, Something like this works:
 
  <img src="https://github.com/user-attachments/assets/252da20b-0ea8-41b2-8e84-59ab53fd98f2" width="400">
+
+**I have added mod packs for scenarios for TOT and MGE, simply download the packs and pace them in he same folder as the installer**
+
+<img src="" width="400">
+
+Just remember to select them options here:
+
+<img src="" width="400">
  
 After a Couple of Prompts to extract temporary files it will bring this lovely powershell window up, select yes or video will crash all 4 games:
 
@@ -107,11 +115,7 @@ Enjoy, special thanks to Apolyton.net, CivFanatics, and all the digital archives
 
 # Upcomming Plans
 
--Split the Installer extras up better
-
--make a mod section for popular TC mods for civ1
-
--Split the nocd section up better so it doesn't install modern mods by default
+-Bug fixing
 
 # Credits
 
