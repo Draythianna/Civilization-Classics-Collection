@@ -20,29 +20,29 @@ Sid Meier's Civilization Test of Time
 
 # Installer Walkthrough (with Pictures)
 
-In order to use this installer you will need archives, disc image files, or it should work with the actual discs if your computer can attach a disc drive, internet if you want extra music tracks for mge, Something like this works:
+In order to use this installer, you will need archives, disc image files, or it should work with the actual discs if your computer can attach a disc drive, and internet if you want extra music tracks for mge, Something like this works:
 
  <img src="https://github.com/user-attachments/assets/252da20b-0ea8-41b2-8e84-59ab53fd98f2" width="400">
 
-**I have added mod packs for scenarios for TOT and MGE, simply download the packs and pace them in he same folder as the installer**
+**I have added mod packs for scenarios for TOT and MGE, simply download the packs and place them in the same folder as the installer**
 
-<img src="" width="400">
+<img src="https://github.com/user-attachments/assets/3415bbc2-441e-4f7b-91f4-c62631de2ed0" width="400">
 
-Just remember to select them options here:
+Just remember to select the options here:
 
-<img src="" width="400">
+<img src="https://github.com/user-attachments/assets/4ff2b005-a99d-49ea-82af-8f299f48fd83" width="400">
  
 After a Couple of Prompts to extract temporary files it will bring this lovely powershell window up, select yes or video will crash all 4 games:
 
  <img src="https://github.com/user-attachments/assets/be7b7202-631b-4271-bf00-d536ac57c5a4" width="400">
 
-Next it will detect what kind of computer Architecture you are using and apply the appropriate Indeo Video Fix, most people now use x64
+Next, it will detect what kind of computer Architecture you are using and apply the appropriate Indeo Video Fix, most people now use x64
 
-Next is the installer main menu:
+Next is the installer's main menu:
 
  <img src="https://github.com/user-attachments/assets/5f4f2d2a-849a-4c0e-bef7-4c393980253d" width="400">
  
-Fancy looking no?  Next accept the license or you aren't getting anywhere! (CC BY-NC-SA)
+Fancy looking no?  Next, accept the license, or you aren't getting anywhere! (CC BY-NC-SA)
 
  <img src="https://github.com/user-attachments/assets/d16489c1-f320-411d-bbe4-880f4325bb89" width="400">
 
@@ -58,15 +58,15 @@ Next main installer options (these may change slightly on newer versions):
 
  <img src="https://github.com/user-attachments/assets/02abfd9c-baeb-4619-8441-9bdf3cfb6e56" width="400">
 
-*note you'll have to scroll to select all the options you want*
+*Note you'll have to scroll to select all the options you want*
 
  <img src="https://github.com/user-attachments/assets/a0a473b5-9b71-4fa1-8959-7e0dcf90d96a" width="400">
  
-Depending on your options you'll see the next set of screen repeated for each game:
+Depending on your options, you'll see the next set of screens repeated for each game:
 
  <img src="https://github.com/user-attachments/assets/faa786e4-1a7f-494d-875b-fd28689b6164" width="400">
 
-When you are done selecting all the formats you will be greeted by repeated screens like this for each game:
+When you are done selecting all the formats, you will be greeted by repeated screens like this for each game:
 
  <img src="https://github.com/user-attachments/assets/c839d1ff-7b3b-4939-b5c1-a2d8a50a46ea" width="400">
 
@@ -74,36 +74,36 @@ When you are done selecting all the formats you will be greeted by repeated scre
 
  <img src="https://github.com/user-attachments/assets/fb921e19-05f7-4670-87a0-fbea5f514306" width="400">
 
-While you can ignore this step, note only Civilization II and Test of Time will work without the 16bit compatibility layer:
+While you can ignore this step, note that only Civilization II and Test of Time will work without the 16bit compatibility layer:
 
  <img src="https://github.com/user-attachments/assets/5d3b2fc5-77f6-42b9-9dd1-4818ba72110e" width="400">
 
-*If you pick the old 16 bit Civilization Games, 1 and CivNET, these are the recommended choices:
+*If you pick the old 16-bit Civilization Games, 1 and CivNET, these are the recommended choices:
 
  <img src="https://github.com/user-attachments/assets/b9c901bf-6da8-4305-92cd-b780103942ed" width="400">
  <img src="https://github.com/user-attachments/assets/28facae2-e7c7-458f-a31d-4fc74287b3b6" width="400">
  <img src="https://github.com/user-attachments/assets/895a0885-8673-4fdc-981f-4e5585c85f71" width="400">
  <img src="https://github.com/user-attachments/assets/50e1aa5c-1f47-4d78-bcc4-3c67c54b7583" width="400">
  
-Once this is done the setup will install the common files, and then run a bunch command scripts looking like these (ignore errors unless something doesn't work):
+Once this is done, the setup will install the common files, and then run a bunch of command scripts looking like these (ignore errors unless something doesn't work):
 
  <img src="https://github.com/user-attachments/assets/4a0ca2a5-b77e-483e-9204-1825e6845195" width="400">
  <img src="https://github.com/user-attachments/assets/ea0690bc-63f2-48ec-9f76-ff7c15baeeca" width="400">
  <img src="https://github.com/user-attachments/assets/36e8d1dd-1186-49ca-abb7-1a4b66988311" width="400">
 
-and last some powershell commands:
+and last some PowerShell commands:
 
  <img src="https://github.com/user-attachments/assets/19d29d12-f722-4255-bf23-cc5a0b8b75d1" width="400">
 
-finishes up with converting the music to usable formats:
+finishes up by converting the music to usable formats:
 
  <img src="https://github.com/user-attachments/assets/60094798-8e02-4c22-9d67-e0d10e2fb409" width="400">
 
-If you choose it it will install the patches and modern fixes:
+If you choose it, it will install the patches and modern fixes:
 
  <img src="https://github.com/user-attachments/assets/7caa5dd7-e298-43e3-948d-2fffa35b6939" width="400">
 
-Lastly the optional extras, including pdf docs and non duplicated original mod author files:
+Lastly, the optional extras, including pdf docs and non-duplicated original mod author files:
 
  <img src="https://github.com/user-attachments/assets/ca923255-cab9-4870-a694-0dcf2afc745f" width="400">
 
@@ -113,7 +113,7 @@ Installer will quit, and you are ready to play, using shortcuts on your desktop 
 
 Enjoy, special thanks to Apolyton.net, CivFanatics, and all the digital archives on Archive.org!
 
-# Upcomming Plans
+# Upcoming Plans
 
 -Bug fixing
 
@@ -130,6 +130,10 @@ https://forums.civfanatics.com/threads/civilization-ii-mge-user-interface-additi
 CivFanatics duplj
 
 https://forums.civfanatics.com/threads/civ2-mge-several-fixes-and-additions-with-support-for-music-tracks.688546/
+
+ProfGarfield
+
+https://github.com/ProfGarfield/ExtendedMusicForTOTPP/
 
 Otya128, OTDVM Project:
 
@@ -155,7 +159,7 @@ BinChunker (Converts archives to ISO and wav for music tracks):
 
 https://github.com/extramaster/bchunk
 
-Indeo codec powershell script (Powershell Indeo Video Reactivator for Windows 8 and above):
+Indeo codec PowerShell script (PowerShell Indeo Video Reactivator for Windows 8 and above):
 
 https://sourceforge.net/p/dxwnd/discussion/general/thread/f77b08a057/
 
@@ -173,4 +177,4 @@ https://stackoverflow.com/
 
 and
 
-Any AI coding search engines + code checking/conversion/creation ai software!
+Any AI coding search engines + code checking/conversion/creation AI software!
