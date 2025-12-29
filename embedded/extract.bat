@@ -80,12 +80,12 @@ mkdir TMP
 cd TMP
 %civmain%\bchunk.v1.2.1_repub.1.exe -w "%CDBIN%" "%CDCUE%" TRACK
 for %%i in (*.wav) do %civmain%\%lame%-b 320 -h %%i %%~ni.mp3
-echo a | %civmain%\7z.exe x TRACK01.iso
-echo a | %civmain%\7z.exe x "%drive%"
+echo A | %civmain%\7z.exe x TRACK01.iso
+echo A | %civmain%\7z.exe x "%drive%"
 cd CivWin3.1
 SETUP.EXE
 cd ..
-echo a | xcopy /S /C /H /R /Y C:\mps\CIVWIN\*.* ..\
+echo A | xcopy /S /C /H /R /Y C:\mps\CIVWIN\*.* ..\
 rd /S /Q C:\mps\CIVWIN
 rmdir C:\mps
 %civmain%\I5comp.exe x data1.cab
@@ -104,11 +104,11 @@ goto final
 set drive=%Civ1ISO%
 echo %drive%
 cd %drive%
-echo a | xcopy /S /C /H /R /Y *.* "%CivPath%\CIVWIN\tmp"
+echo A | xcopy /S /C /H /R /Y *.* "%CivPath%\CIVWIN\tmp"
 %drive%\SETUP.EXE
 mkdir "%CivPath%\CIVWIN"
 cd "%CivPath%\CIVWIN"
-echo a | xcopy /S /C /H /R /Y C:\mps\CIVWIN\*.* .
+echo A | xcopy /S /C /H /R /Y C:\mps\CIVWIN\*.* .
 rd /S /Q C:\mps\CIVWIN
 rmdir C:\mps
 rmdir "%CivPath%\CIVWIN\CivWin3.1"
@@ -148,13 +148,13 @@ cd TMP
 for %%i in (*.wav) do %civmain%\%lame%-b 320 -h %%i %%~ni.mp3
 mkdir ..\Music
 move *.wav ..\Music
-echo a | %civmain%\7z.exe x TRACK01.iso
-echo a | %civmain%\7z.exe x "%drive%"
-echo a | xcopy /S /C /H /R /Y CIVGUIDE ../
-echo a | xcopy /S /C /H /R /Y INTERNET ../
+echo A | %civmain%\7z.exe x TRACK01.iso
+echo A | %civmain%\7z.exe x "%drive%"
+echo A | xcopy /S /C /H /R /Y CIVGUIDE ../
+echo A | xcopy /S /C /H /R /Y INTERNET ../
 INSTALL.exe
 cd ..
-echo a | xcopy /S /C /H /R /Y C:\mps\CIVNET\*.* .
+echo A | xcopy /S /C /H /R /Y C:\mps\CIVNET\*.* .
 rd /S /Q C:\mps\CIVNET
 rmdir C:\mps
 %civmain%\I5comp.exe x TMP\data1.cab
@@ -176,9 +176,9 @@ set drive=%CivNetDrive%
 cd %drive%
 INSTALL.exe
 mkdir "%CivPath%\CIVNET"
-echo a | xcopy /S /C /H /R /Y C:\mps\CIVNET\*.* "%CivPath%\CIVNET\"
-echo a | xcopy /S /C /H /R /Y "%drive%\CIVGUIDE" "%CivPath%\CIVNET\CIVGUIDE"
-echo a | xcopy /S /C /H /R /Y "%drive%\INTERNET" "%CivPath%\CIVNET\INTERNET"
+echo A | xcopy /S /C /H /R /Y C:\mps\CIVNET\*.* "%CivPath%\CIVNET\"
+echo A | xcopy /S /C /H /R /Y "%drive%\CIVGUIDE" "%CivPath%\CIVNET\CIVGUIDE"
+echo A | xcopy /S /C /H /R /Y "%drive%\INTERNET" "%CivPath%\CIVNET\INTERNET"
 rd /S /Q C:\mps\CIVNET
 rmdir C:\mps
 echo CivNet Installed...
@@ -241,14 +241,14 @@ move TRACK12.wav2 TRACK11.wav
 for %%i in (*.wav) do %civmain%\%lame%-b 320 -h %%i %%~ni.mp3
 mkdir ..\Music
 move *.wav ..\Music
-echo a | %civmain%\7z.exe x TRACK01.iso
+echo A | %civmain%\7z.exe x TRACK01.iso
 cd ..
 %civmain%\I5comp.exe x TMP\data1.cab
 move TMP\*.mp3 Music\
 mkdir VIDEO
-echo a | xcopy /S /C /H /R /Y TMP\Civ2\VIDEO\*.* VIDEO\
+echo A | xcopy /S /C /H /R /Y TMP\Civ2\VIDEO\*.* VIDEO\
 mkdir KINGS
-echo a | xcopy /S /C /H /R /Y TMP\Civ2\KINGS\*.* KINGS\
+echo A | xcopy /S /C /H /R /Y TMP\Civ2\KINGS\*.* KINGS\
 rd /S /Q TMP
 mkdir Sound
 move *.wav Sound\
@@ -264,7 +264,7 @@ echo %drive%
 cd %drive%
 mkdir "%CivPath%\Civilization II Multiplayer Gold Edition"
 mkdir "%CivPath%\Civilization II Multiplayer Gold Edition\TMP"
-echo a | xcopy /S /C /H /R /Y *.* "%CivPath%\Civilization II Multiplayer Gold Edition\TMP"
+echo A | xcopy /S /C /H /R /Y *.* "%CivPath%\Civilization II Multiplayer Gold Edition\TMP"
 goto civ2b
 
 :civ2c
@@ -297,14 +297,14 @@ cd TMP
 %civmain%\bchunk.v1.2.1_repub.1.exe -w "%CDBIN%" "%CDCUE%" TRACK
 for %%i in (*.wav) do %civmain%\%lame%-b 320 -h %%i %%~ni.mp3
 del TRACK*.wav
-echo a | %civmain%\7z.exe x TRACK01.iso
+echo A | %civmain%\7z.exe x TRACK01.iso
 cd ..
 %civmain%\I5comp.exe x TMP\data1.cab
 mkdir Music
 move TMP\*.wav Music\
 move TMP\*.mp3 Music\
 mkdir VIDEO
-echo a | xcopy /S /C /H /R /Y TMP\Civ2\VIDEO\*.* VIDEO\
+echo A | xcopy /S /C /H /R /Y TMP\Civ2\VIDEO\*.* VIDEO\
 move Music\TRACK02.mp3 "Music\Funeral March.mp3"
 move Music\TRACK03.mp3 "Music\Ode To Joy.mp3"
 move Music\TRACK04.mp3 "Music\Crusade.mp3"
@@ -328,7 +328,7 @@ set drive=%CivToTDrive%
 cd %drive%
 mkdir "%CivPath%\Test of Time"
 mkdir "%CivPath%\Test of Time\TMP"
-echo a | xcopy /S /C /H /R /Y *.* "%CivPath%\Test of Time\TMP"
+echo A | xcopy /S /C /H /R /Y *.* "%CivPath%\Test of Time\TMP"
 goto civtb
 
 :civtc
