@@ -27,7 +27,7 @@ In order to use this installer, you will need archives, disc image files, or it 
 **I have added mod packs for scenarios for TOT and MGE, simply download the packs and place them in the same folder as the installer**
 
 
-<a href="https://mega.nz/file/DPBQnB4Y#Yy8EXgKUE_5_NyWC65dCAWb-P_5X7Ap2NFbwvftNCCg"> MGE here:></a>
+<a href="https://mega.nz/file/DPBQnB4Y#Yy8EXgKUE_5_NyWC65dCAWb-P_5X7Ap2NFbwvftNCCg"> MGE here:</a>
 
 <a href="https://mega.nz/file/yOwkGDCR#UzgBbKDHGMqqAs7aJb8ZmbyidJeNP4rlMiztaGcTnlo"> TOT HERE:</a>
 
