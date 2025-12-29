@@ -13,7 +13,7 @@ set "civmain=%CIVMAIN%"
 cls
 
 mkdir "%CivPath%\common\extras"
-echo A|%civmain%\7z.exe x extras.7z -o"%CivPath%\common\extras"
+%civmain%\7z.exe x extras.7z -o"%CivPath%\common\extras" -y
 echo Extra's Installed...
 
 timeout 5

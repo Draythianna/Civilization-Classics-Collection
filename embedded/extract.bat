@@ -80,8 +80,8 @@ mkdir TMP
 cd TMP
 %civmain%\bchunk.v1.2.1_repub.1.exe -w "%CDBIN%" "%CDCUE%" TRACK
 for %%i in (*.wav) do %civmain%\%lame%-b 320 -h %%i %%~ni.mp3
-echo A|%civmain%\7z.exe x TRACK01.iso
-echo A|%civmain%\7z.exe x "%drive%"
+%civmain%\7z.exe x TRACK01.iso -y
+%civmain%\7z.exe x "%drive%" -y
 cd CivWin3.1
 SETUP.EXE
 cd ..
@@ -148,8 +148,8 @@ cd TMP
 for %%i in (*.wav) do %civmain%\%lame%-b 320 -h %%i %%~ni.mp3
 mkdir ..\Music
 move *.wav ..\Music
-echo A|%civmain%\7z.exe x TRACK01.iso
-echo A|%civmain%\7z.exe x "%drive%"
+%civmain%\7z.exe x TRACK01.iso -y
+%civmain%\7z.exe x "%drive%" -y
 echo D|xcopy /S /C /H /R /Y CIVGUIDE ../
 echo D|xcopy /S /C /H /R /Y INTERNET ../
 INSTALL.exe
@@ -241,7 +241,7 @@ move TRACK12.wav2 TRACK11.wav
 for %%i in (*.wav) do %civmain%\%lame%-b 320 -h %%i %%~ni.mp3
 mkdir ..\Music
 move *.wav ..\Music
-echo A|%civmain%\7z.exe x TRACK01.iso
+%civmain%\7z.exe x TRACK01.iso -y
 cd ..
 %civmain%\I5comp.exe x TMP\data1.cab
 move TMP\*.mp3 Music\
@@ -297,7 +297,7 @@ cd TMP
 %civmain%\bchunk.v1.2.1_repub.1.exe -w "%CDBIN%" "%CDCUE%" TRACK
 for %%i in (*.wav) do %civmain%\%lame%-b 320 -h %%i %%~ni.mp3
 del TRACK*.wav
-echo A|%civmain%\7z.exe x TRACK01.iso
+%civmain%\7z.exe x TRACK01.iso -y
 cd ..
 %civmain%\I5comp.exe x TMP\data1.cab
 mkdir Music

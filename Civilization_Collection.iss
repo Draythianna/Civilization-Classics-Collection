@@ -379,61 +379,61 @@ Filename: "cmd.exe"; Parameters: "/c {sys}\InfDefaultInstall.exe {sd}\OTVDM\inst
 ; ============================
 ; Civ1ModDemake.7z → Civ2 MGE
 ; ============================
-Filename: "{commonappdata}\Temp\CivTemp\7z.exe";Parameters: "x ""{src}\Civ1ModDemake.7z"" -o""{app}\Civilization II Multiplayer Gold Edition\"" -y";Flags: runhidden waituntilterminated postinstall;Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ2\LowRes') and FileExists(ExpandConstant('{src}\Civ1ModDemake.7z'))
+Filename: "{commonappdata}\Temp\CivTemp\7z.exe"; Parameters: "x ""{src}\Civ1ModDemake.7z"" -o""{app}\Civilization II Multiplayer Gold Edition\"" -y"; Flags: runhidden waituntilterminated postinstall; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ2\LowRes') and FileExists(ExpandConstant('{src}\Civ1ModDemake.7z'))
 
 ; ============================
 ; civ1scenarios.7z → CIVWIN
 ; ============================
-Filename: "{commonappdata}\Temp\CivTemp\7z.exe";Parameters: "x ""{src}\civ1scenarios.7z"" -o""{app}\CIVWIN\"" -y";Flags: runhidden waituntilterminated postinstall;Check: IsComponentSelected('Common\Tasks\Update\Scenarios\Civ1') and FileExists(ExpandConstant('{src}\civ1scenarios.7z'))
+Filename: "{commonappdata}\Temp\CivTemp\7z.exe"; Parameters: "x ""{src}\civ1scenarios.7z"" -o""{app}\CIVWIN\"" -y"; Flags: runhidden waituntilterminated postinstall; Check: IsComponentSelected('Common\Tasks\Update\Scenarios\Civ1') and FileExists(ExpandConstant('{src}\civ1scenarios.7z'))
 
 ; ==============================================
 ; Civ1_Win_Soundtrack_Overhaul_Mod.7z → CIVWIN
 ; ==============================================
-Filename: "{commonappdata}\Temp\CivTemp\7z.exe";Parameters: "x ""{src}\Civ1_Win_Soundtrack_Overhaul_Mod.7z"" -o""{app}\CIVWIN\"" -y";Flags: runhidden waituntilterminated  postinstall;Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ1\Music') and FileExists(ExpandConstant('{src}\Civ1_Win_Soundtrack_Overhaul_Mod.7z'))
+Filename: "{commonappdata}\Temp\CivTemp\7z.exe"; Parameters: "x ""{src}\Civ1_Win_Soundtrack_Overhaul_Mod.7z"" -o""{app}\CIVWIN\"" -y"; Flags: runhidden waituntilterminated  postinstall; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ1\Music') and FileExists(ExpandConstant('{src}\Civ1_Win_Soundtrack_Overhaul_Mod.7z'))
 
 ; ============================
 ; civdata4.zip → CIVWIN
 ; ============================
-Filename: "{commonappdata}\Temp\CivTemp\7z.exe";Parameters: "x ""{src}\civdata4.zip"" -o""{app}\CIVWIN\"" -y";Flags: runhidden waituntilterminated postinstall;Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ1\DOS') and FileExists(ExpandConstant('{src}\civdata4.zip'))
+Filename: "{commonappdata}\Temp\CivTemp\7z.exe"; Parameters: "x ""{src}\civdata4.zip"" -o""{app}\CIVWIN\"" -y"; Flags: runhidden waituntilterminated postinstall; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ1\DOS') and FileExists(ExpandConstant('{src}\civdata4.zip'))
 
 ; ============================
 ; CivNet-102-WSPatch.zip → CIVNET
 ; ============================
-Filename: "{commonappdata}\Temp\CivTemp\7z.exe";Parameters: "x ""{src}\CivNet-102-WSPatch.zip"" -o""{app}\CIVNET\"" -y";Flags: runhidden waituntilterminated postinstall;Check: IsComponentSelected('Common\Tasks\Update\Mods\CivNet\WS') and FileExists(ExpandConstant('{src}\CivNet-102-WSPatch.zip'))
+Filename: "{commonappdata}\Temp\CivTemp\7z.exe"; Parameters: "x ""{src}\CivNet-102-WSPatch.zip"" -o""{app}\CIVNET\"" -y"; Flags: runhidden waituntilterminated postinstall; Check: IsComponentSelected('Common\Tasks\Update\Mods\CivNet\WS') and FileExists(ExpandConstant('{src}\CivNet-102-WSPatch.zip'))
 
 ; ============================
 ; CivNetDOSTilesBeta4.zip → CIVNET
 ; ============================
-Filename: "{commonappdata}\Temp\CivTemp\7z.exe";Parameters: "x ""{src}\CivNetDOSTilesBeta4.zip"" -o""{app}\CIVNET\"" -y";Flags: runhidden waituntilterminated postinstall;Check: IsComponentSelected('Common\Tasks\Update\Mods\CivNet\DOS') and FileExists(ExpandConstant('{src}\CivNetDOSTilesBeta4.zip'))
+Filename: "{commonappdata}\Temp\CivTemp\7z.exe"; Parameters: "x ""{src}\CivNetDOSTilesBeta4.zip"" -o""{app}\CIVNET\"" -y"; Flags: runhidden waituntilterminated postinstall; Check: IsComponentSelected('Common\Tasks\Update\Mods\CivNet\DOS') and FileExists(ExpandConstant('{src}\CivNetDOSTilesBeta4.zip'))
 
 ; ============================
 ; CivWinSNES_WIP3A.zip → CIVWIN
 ; ============================
-Filename: "{commonappdata}\Temp\CivTemp\7z.exe";Parameters: "x ""{src}\CivWinSNES_WIP3A.zip"" -o""{app}\CIVWIN\"" -y";Flags: runhidden waituntilterminated postinstall;Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ1\SNES') and FileExists(ExpandConstant('{src}\CivWinSNES_WIP3A.zip'))
+Filename: "{commonappdata}\Temp\CivTemp\7z.exe"; Parameters: "x ""{src}\CivWinSNES_WIP3A.zip"" -o""{app}\CIVWIN\"" -y"; Flags: runhidden waituntilterminated postinstall; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ1\SNES') and FileExists(ExpandConstant('{src}\CivWinSNES_WIP3A.zip'))
 
 ; ============================
 ; CivWin_PC98Tileset.zip → CIVWIN
 ; ============================
-Filename: "{commonappdata}\Temp\CivTemp\7z.exe";Parameters: "x ""{src}\CivWin_PC98Tileset.zip"" -o""{app}\CIVWIN\"" -y";Flags: runhidden waituntilterminated postinstall;Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ1\PC98') and FileExists(ExpandConstant('{src}\CivWin_PC98Tileset.zip'))
+Filename: "{commonappdata}\Temp\CivTemp\7z.exe"; Parameters: "x ""{src}\CivWin_PC98Tileset.zip"" -o""{app}\CIVWIN\"" -y"; Flags: runhidden waituntilterminated postinstall; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ1\PC98') and FileExists(ExpandConstant('{src}\CivWin_PC98Tileset.zip'))
 
 ; ============================
 ; HiResv24.7z → Civ2 MGE
 ; ============================
-Filename: "{commonappdata}\Temp\CivTemp\7z.exe";Parameters: "x ""{src}\HiResv24.7z"" -o""{app}\Civilization II Multiplayer Gold Edition\"" -y";Flags: runhidden waituntilterminated postinstall;Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ2\HiRes') and FileExists(ExpandConstant('{src}\HiResv24.7z'))
+Filename: "{commonappdata}\Temp\CivTemp\7z.exe"; Parameters: "x ""{src}\HiResv24.7z"" -o""{app}\Civilization II Multiplayer Gold Edition\"" -y"; Flags: runhidden waituntilterminated postinstall; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ2\HiRes') and FileExists(ExpandConstant('{src}\HiResv24.7z'))
 
 ; ============================
 ; MGEgfx.zip → Test of Time
 ; ============================
-Filename: "{commonappdata}\Temp\CivTemp\7z.exe";Parameters: "x ""{src}\MGEgfx.zip"" -o""{app}\Test of Time\"" -y";Flags: runhidden waituntilterminated postinstall;Check: IsComponentSelected('Common\Tasks\Update\Mods\CivTot\MGEGfx') and FileExists(ExpandConstant('{src}\MGEgfx.zip'))
+Filename: "{commonappdata}\Temp\CivTemp\7z.exe"; Parameters: "x ""{src}\MGEgfx.zip"" -o""{app}\Test of Time\"" -y"; Flags: runhidden waituntilterminated postinstall; Check: IsComponentSelected('Common\Tasks\Update\Mods\CivTot\MGEGfx') and FileExists(ExpandConstant('{src}\MGEgfx.zip'))
 ; ============================
 ; SCENARIO pack → Test of Time
 ; ============================
-Filename: "{commonappdata}\Temp\CivTemp\7z.exe";Parameters: "x ""{src}\BESTONETX.7z"" -o""{app}\Test of Time"" -y";Flags: runhidden waituntilterminated postinstall;Check: IsComponentSelected('Common\Tasks\Update\Scenarios\CivToT') and FileExists(ExpandConstant('{src}\BESTONETX.7z'))
+Filename: "{commonappdata}\Temp\CivTemp\7z.exe"; Parameters: "x ""{src}\BESTONETX.7z"" -o""{app}\Test of Time"" -y"; Flags: runhidden waituntilterminated postinstall; Description: "Install Civ2TOT Scenarios"; Check: IsComponentSelected('Common\Tasks\Update\Scenarios\CivToT') and FileExists(ExpandConstant('{src}\BESTONETX.7z'))
 
 ; ============================
 ; SCENARIO pack → Civ II MGE
 ; ============================
-Filename: "{commonappdata}\Temp\CivTemp\7z.exe";Parameters: "x ""{src}\SCENARIO.7z"" -o""{app}\Civilization II Multiplayer Gold Edition"" -y";Flags: runhidden waituntilterminated postinstall;Check: IsComponentSelected('Common\Tasks\Update\Scenarios\Civ2') and FileExists(ExpandConstant('{src}\SCENARIO.7z'))
+Filename: "{commonappdata}\Temp\CivTemp\7z.exe"; Parameters: "x ""{src}\SCENARIO.7z"" -o""{app}\Civilization II Multiplayer Gold Edition"" -y"; Flags: runhidden waituntilterminated postinstall; Description: "Install Civ2MGE Scenarios"; Check: IsComponentSelected('Common\Tasks\Update\Scenarios\Civ2') and FileExists(ExpandConstant('{src}\SCENARIO.7z'))
 
 [INI]
 Filename: "{commonappdata}\Temp\CivTemp\Setup.ini"; Section: "Install"; Key: "Civ1ISO"; String: "{code:GetCiv1ISO}"
