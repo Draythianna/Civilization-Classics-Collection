@@ -63,7 +63,7 @@ echo Sid Meier's Civilization 1 Extractor...
 set drive=%Civ1Data%
 for %%i in (%drive%) do if %%~xi==.zip goto civd
 for %%i in (%drive%) do if %%~xi==.rar goto civd
-for %%i in (%drive%) do if %%~xi==.7z goto civd
+for %%i in (%drive%) do if %%~xi==.7z.exe goto civd
 set drive=%Civ1Drive%
 if exist %drive%\Setup.exe goto civc
 goto civa
@@ -133,7 +133,7 @@ echo Sid Meier's CivNet Extractor...
 set drive=%CivNetData%
 for %%i in (%drive%) do if %%~xi==.zip goto civnc
 for %%i in (%drive%) do if %%~xi==.rar goto civnc
-for %%i in (%drive%) do if %%~xi==.7z goto civnc
+for %%i in (%drive%) do if %%~xi==.7z.exe goto civnc
 set drive=%CivNetDrive%
 if exist %drive%\INSTALL.exe goto civna
 goto civnd
@@ -211,7 +211,7 @@ echo Sid Meier's Civilization II Multiplayer Gold Edition Extractor...
 set drive=%Civ2Data%
 for %%i in (%drive%) do if %%~xi==.zip goto civ2d
 for %%i in (%drive%) do if %%~xi==.rar goto civ2d
-for %%i in (%drive%) do if %%~xi==.7z goto civ2d
+for %%i in (%drive%) do if %%~xi==.7z.exe goto civ2d
 set drive=%Civ2Drive%
 if exist %drive%\Setup.exe goto civ2a
 goto civ2c
@@ -280,7 +280,7 @@ echo Sid Meier's Civilization Test of Time Extractor...
 set drive=%CivToTData%
 for %%i in (%drive%) do if %%~xi==.zip goto civtd
 for %%i in (%drive%) do if %%~xi==.rar goto civtd
-for %%i in (%drive%) do if %%~xi==.7z goto civtd
+for %%i in (%drive%) do if %%~xi==.7z.exe goto civtd
 set drive=%CivToTDrive%
 if exist %drive%\Setup.exe goto civta
 goto civtc
