@@ -228,6 +228,8 @@ Source: "Tools\common\OTVDM\installw.inf"; DestDir: "{sd}\OTVDM"; Flags: ignorev
 Source: "Tools\common\OTVDM\install.lnk"; DestDir: "{sd}\OTVDM"; Flags: ignoreversion; Components: Common
 Source: "Tools\common\OTVDM\install.inf"; DestDir: "{sd}\OTVDM"; Flags: ignoreversion; Components: Common
 Source: "Tools\common\OTVDM\install (no console).lnk"; DestDir: "{sd}\OTVDM"; Flags: ignoreversion; Components: Common
+Source: "Tools\common\OTVDM\isfixload.7z"; DestDir: "{sd}\OTVDM"; Flags: ignoreversion; Components: Common
+Source: "Tools\common\OTVDM\isfixload.exe"; DestDir: "{sd}\OTVDM"; Flags: ignoreversion; Components: Common
 Source: "embedded\tot\civ2_5.ico"; DestDir: "{app}\common\tot\"; Flags: ignoreversion; Components: Common
 Source: "embedded\tot\civ2_4.ico"; DestDir: "{app}\common\tot\"; Flags: ignoreversion; Components: Common
 Source: "embedded\tot\civ2_3.ico"; DestDir: "{app}\common\tot\"; Flags: ignoreversion; Components: Common
