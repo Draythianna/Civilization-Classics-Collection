@@ -54,12 +54,13 @@ echo y | copy "Civ2x64EditboxPatcher.exe" "%CivPath%\Civilization II Multiplayer
 "%civmain%\7z.exe" e "90936-tot_corrected_dlls.rar" -o"%CivPath%\Test of Time\" -y
 rd /s /q "%CivPath%\Test of Time\ToT corrected DLLs\"
 
+cd "%CivPath%\Civilization II Multiplayer Gold Edition"
 echo y | copy "%CivPath%\Civilization II Multiplayer Gold Edition\civ.exe" "%CivPath%\Civilization II Multiplayer Gold Edition\civ.bak"
 echo y | copy "%CivPath%\Civilization II Multiplayer Gold Edition\Civ2Map.exe" "%CivPath%\Civilization II Multiplayer Gold Edition\Civ2Map.bak"
 
 mkdir "%CivPath%\Civilization II Multiplayer Gold Edition\Right_mouse_click"
 mkdir "%CivPath%\Civilization II Multiplayer Gold Edition\Without_very_large_maps"
-
+cd "%CivPath%\Civilization II Multiplayer Gold Edition"
 "%XDELTA_EXE%" -v -v -f -d -s "civ2.exe" "%civmain%\civ2.diff" "civ2.music.exe"
 "%XDELTA_EXE%" -v -v -f -d -s "Civ2Map.exe" "%civmain%\Civ2Map.diff" "Civ2Map.fixes.exe"
 "%XDELTA_EXE%" -v -v -f -d -s "Civ2.exe" "%civmain%\civ2_right.diff" "Civ2Map.fixes.exe"
@@ -99,10 +100,10 @@ echo y | copy "Civ2x64EditboxPatcher.exe" "%CivPath%\Civilization II Multiplayer
 mkdir "%CivPath%\Civilization II Multiplayer Gold Edition\Right_mouse_click"
 mkdir "%CivPath%\Civilization II Multiplayer Gold Edition\Without_very_large_maps"
 
-cd "%CivPath%\Civilization II Multiplayer Gold Edition\"
+cd "%CivPath%\Civilization II Multiplayer Gold Edition"
 echo y | copy "%CivPath%\Civilization II Multiplayer Gold Edition\civ.exe" "%CivPath%\Civilization II Multiplayer Gold Edition\civ.bak"
 echo y | copy "%CivPath%\Civilization II Multiplayer Gold Edition\Civ2Map.exe" "%CivPath%\Civilization II Multiplayer Gold Edition\Civ2Map.bak"
-
+cd "%CivPath%\Civilization II Multiplayer Gold Edition"
 "%XDELTA_EXE%" -v -v -f -d -s "Civ2Map.exe" "%civmain%\Civ2Map.diff" "Civ2Map.fixes.exe"
 "%XDELTA_EXE%" -v -v -f -d -s "Civ2Map.exe" "%civmain%\civmapsmallmaps.diff" "Without_very_large_maps\Civ2Map.smaps.exe"
 "%XDELTA_EXE%" -v -v -f -d -s "civ2.exe" "%civmain%\smallmaps.diff" "Without_very_large_maps\civ2.smaps.exe"
