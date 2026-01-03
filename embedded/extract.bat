@@ -340,10 +340,9 @@ set drive=%CivToTData%
 goto civtb
 
 :final
-if exist "%CivPath%\Civilization II Multiplayer Gold Edition" cd "%CivPath%\Civilization II Multiplayer Gold Edition\Music" && for %%i in (*.mp3) do "%LAME%" --decode "%%i" "%%~ni.wav"
-
-cd /
 cd "%civmain%"
+if exist "%CivPath%\Civilization II Multiplayer Gold Edition" cd "%CivPath%\Civilization II Multiplayer Gold Edition\Music" && for %%i in (*.mp3) do "%LAME%" --decode "%%i" "%%~ni.wav"
+cd /
 echo Extraction done...
 timeout 10
 exit /b 0
