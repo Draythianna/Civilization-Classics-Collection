@@ -54,7 +54,6 @@ echo y |copy Civ2x64EditboxPatcher.exe "%CivPath%\Civilization II Multiplayer Go
 %civmain%\7z.exe x TOTPPv018.4.zip -o"%CivPath%\Test of Time\" -y
 %civmain%\7z.exe e 90936-tot_corrected_dlls.rar -o"%CivPath%\Test of Time\" -y
 rd /s /q "%CivPath%\Test of Time\ToT corrected DLLs\"
-%civmain%\7z.exe x ExtendedMusic.7z.exe -o"%CivPath%\Test of Time\" -y
 echo y | copy "%CivPath%\Civilization II Multiplayer Gold Edition\civ.exe" "%CivPath%\Civilization II Multiplayer Gold Edition\civ.bak"
 echo y | copy "%CivPath%\Civilization II Multiplayer Gold Edition\Civ2Map.exe" "%CivPath%\Civilization II Multiplayer Gold Edition\Civ2Map.bak
 mkdir "%CivPath%\Civilization II Multiplayer Gold Edition\Right_mouse_click"
@@ -76,7 +75,6 @@ cd\
 %civmain%\7z.exe e 90936-tot_corrected_dlls.rar -o"%CivPath%\Test of Time\" -y
 %civmain%\7z.exe x TOTPPv018.4.zip -o"%CivPath%\Test of Time\" -y
 rd /s /q "%CivPath%\Test of Time\ToT corrected DLLs\"
-%civmain%\7z.exe x ExtendedMusic.7z -o"%CivPath%\Test of Time\" -y
 cd "%CivPath%\Test of Time"
 %XDELTA_EXE% -v -v -f -d -s civ2.exe "%civmain%\totpatched64.diff" civ2.x64.exe 
 %XDELTA_EXE% -v -v -f -d -s civ2.exe "%civmain%\civ2tot.diff" civ2.fixes.exe
@@ -119,7 +117,6 @@ cd %civmain%
 %civmain%\7z.exe e 90936-tot_corrected_dlls.rar -o"%CivPath%\Test of Time\" -y
 %civmain%\7z.exe x TOTPPv018.4.zip -o"%CivPath%\Test of Time\" -y
 rd /s /q "%CivPath%\Test of Time\ToT corrected DLLs\"
-%civmain%\7z.exe x ExtendedMusic.7z -o"%CivPath%\Test of Time\" -y
 cd "%CivPath%\Test of Time"
 %XDELTA_EXE% -v -v -f -d -s civ2.exe "%civmain%\civ2tot.diff" civ2.fixes.exe
 %XDELTA_EXE% -v -v -f -d -s civ2.exe "%civmain%\civ2tot.diff" civ2.fixes.exe

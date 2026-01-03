@@ -376,6 +376,7 @@ Type: files; Name: "{app}\common\PATCH.txt"; BeforeInstall: InitializeWizard
 
 [Run]
 Filename: "{cmd}"; Parameters: "/c """"{sys}\InfDefaultInstall.exe"""" """"{src}\OTVDM\installw.inf"""""; Flags: runhidden waituntilterminated 64bit; Description: "Install 16-bit Compatibility Layer"
+Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{src}\ExtendedMusic.7z"" -o""{app}\CIVWIN"" -y -aoa"""""; Flags: waituntilterminated runnormal; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ1\Music') and FileExists(ExpandConstant('{src}\ExtendedMusic.7z'))
 Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{src}\Civ1ModDemake.7z"" -o""{app}\Civilization II Multiplayer Gold Edition"" -y -aoa"""""; Flags: waituntilterminated runnormal; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ2\LowRes') and FileExists(ExpandConstant('{src}\Civ1ModDemake.7z'))
 Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{src}\civ1scenarios.7z"" -o""{app}\CIVWIN"" -y -aoa"""""; Flags: waituntilterminated runnormal; Check: IsComponentSelected('Common\Tasks\Update\Scenarios\Civ1') and FileExists(ExpandConstant('{src}\civ1scenarios.7z'))
 Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{src}\BESTONETX.7z"" -o""{app}\Test of Time\BESTONETX"" -y -aoa"""""; Flags: waituntilterminated runnormal; Description: "Install Civ2TOT Scenarios"; Check: IsComponentSelected('Common\Tasks\Update\Scenarios\CivToT') and FileExists(ExpandConstant('{src}\BESTONETX.7z'))
