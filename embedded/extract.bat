@@ -150,8 +150,8 @@ mkdir ..\Music
 move *.wav ..\Music
 %civmain%\7z.exe x TRACK01.iso -y
 %civmain%\7z.exe x "%drive%" -y
-echo D|xcopy /S /C /H /R /Y CIVGUIDE ../
-echo D|xcopy /S /C /H /R /Y INTERNET ../
+echo D|xcopy /S /C /H /R /Y CIVGUIDE "%CivPath%\CIVNET\CIVGUIDE\"
+echo D|xcopy /S /C /H /R /Y INTERNET "%CivPath%\CIVNET\INTERNET\"
 INSTALL.exe
 cd ..
 echo D|xcopy /S /C /H /R /Y C:\mps\CIVNET\*.* .
@@ -177,8 +177,8 @@ cd %drive%
 INSTALL.exe
 mkdir "%CivPath%\CIVNET"
 echo D|xcopy /S /C /H /R /Y C:\mps\CIVNET\*.* "%CivPath%\CIVNET\"
-echo D|xcopy /S /C /H /R /Y "%drive%\CIVGUIDE" "%CivPath%\CIVNET\CIVGUIDE"
-echo D|xcopy /S /C /H /R /Y "%drive%\INTERNET" "%CivPath%\CIVNET\INTERNET"
+echo D|xcopy /S /C /H /R /Y "%drive%\CIVGUIDE" "%CivPath%\CIVNET\CIVGUIDE\"
+echo D|xcopy /S /C /H /R /Y "%drive%\INTERNET" "%CivPath%\CIVNET\INTERNET\"
 rd /S /Q C:\mps\CIVNET
 rmdir C:\mps
 echo CivNet Installed...
@@ -340,7 +340,7 @@ set drive=%CivToTData%
 goto civtb
 
 :final
-if exist "%CivPath%\Civilization II Multiplayer Gold Edition" cd "%CivPath%\Civilization II Multiplayer Gold Edition\Music" && for %%i in (*.mp3) do "%lame%" --decode "%%i" "%%~ni.wav"
+if exist "%CivPath%\Civilization II Multiplayer Gold Edition" cd "%CivPath%\Civilization II Multiplayer Gold Edition\Music" && for %%i in (*.mp3) do "%LAME%" --decode "%%i" "%%~ni.wav"
 
 cd /
 cd "%civmain%"

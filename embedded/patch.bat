@@ -54,13 +54,13 @@ pushd "%CIVMAIN%" || exit /b 1
 if exist "%CivPath%\common\CIVNET.TXT" (%civmain%\7z.exe e "%civmain%\Sid-Meiers-CivNet_Patch_Win-3x_EN_Patch-13.zip" -o"%CivPath%\CIVNET" -y && rd /s /q "%CivPath%\CIVNET\Sid_Meiers_Civnet_patch_13")
 cd \
 pushd "%CIVMAIN%" || exit /b 1
-if exist "%CivPath%\common\CIV2MGE.TXT" (%civmain%\7z.exe e mgepatch.7z -o%civmain%\mgepatch -y && cd mgepatch && mkdir out && cd out && %civmain%\i5comp x ..\data1.cab && xcopy /S /C /H /R /Y *.* "%CivPath%\Civilization II Multiplayer Gold Edition")
+if exist "%CivPath%\common\CIV2MGE.TXT" (%civmain%\7z.exe e "%civmain%\mgepatch.7z" -o"%civmain%\mgepatch" -y && cd "%civmain%\mgepatch" && mkdir out && cd out && "%civmain%\i5comp.exe" x "%civmain%\mgepatch\data1.cab" && xcopy /S /C /H /R /Y *.* "%CivPath%\Civilization II Multiplayer Gold Edition")
 cd \
 pushd "%CIVMAIN%" || exit /b 1
-if exist "%CivPath%\common\CIV2TOT.TXT" (%civmain%\7z.exe e totpatch.7z -o%civmain%\totpatch -y && cd totpatch && mkdir out && cd out && %civmain%\i5comp x ..\data1.cab && xcopy /S /C /H /R /Y *.* "%CivPath%\Test of Time")
+if exist "%CivPath%\common\CIV2TOT.TXT" (%civmain%\7z.exe e "%civmain%\totpatch.7z" -o"%civmain%\totpatch" -y && cd "%civmain%\totpatch" && mkdir out && cd out && "%civmain%\i5comp.exe" x "%civmain%\totpatch\data1.cab" && xcopy /S /C /H /R /Y *.* "%CivPath%\Test of Time")
 cd \
 pushd "%CIVMAIN%" || exit /b 1
-if exist "%CivPath%\common\CIV2TOT.TXT" (%civmain%\7z.exe e totTTP.7z -o%civmain%\totTTP -y && cd totTTP && mkdir out && cd out && %civmain%\i5comp x ..\data1.cab && xcopy /S /C /H /R /Y *.* "%CivPath%\Test of Time")
+if exist "%CivPath%\common\CIV2TOT.TXT" (%civmain%\7z.exe e "%civmain%\totTTP.7z" -o"%civmain%\totTTP" -y && cd "%civmain%\totTTP" && mkdir out && cd out && "%civmain%\i5comp.exe" x "%civmain\totTTP\data1.cab" && xcopy /S /C /H /R /Y *.* "%CivPath%\Test of Time")
 goto END
 
 :FULL
@@ -68,27 +68,27 @@ goto END
 rd /s /q "%CivPath%\CIVWIN\Civilization_Win_upgrade_v1.2"
 %civmain%\7z.exe e "%civmain%\Sid-Meiers-CivNet_Patch_Win-3x_EN_Patch-13.zip" -o"%CivPath%\CIVNET" -y
 rmdir "%CivPath%\CIVNET\Sid_Meiers_Civnet_patch_13"
-%civmain%\7z.exe e mgepatch.7z -o%civmain%\mgepatch -y
-cd mgepatch
+%civmain%\7z.exe e "%civmain%\mgepatch.7z" -o"%civmain%\mgepatch" -y
+cd "%civmain%\mgepatch"
 mkdir out
 cd out
-%civmain%\i5comp x ..\data1.cab
+"%civmain%\i5comp.exe" x "%civmain%\mgepatch\data1.cab"
 xcopy /S /C /H /R /Y *.* "%CivPath%\Civilization II Multiplayer Gold Edition"
 cd \
 pushd "%CIVMAIN%" || exit /b 1
-%civmain%\7z.exe e totpatch.7z -o%civmain%\totpatch -y
-cd totpatch
+"%civmain%\7z.exe" e "%civmain%\totpatch.7z" -o"%civmain%\totpatch" -y
+cd "%civmain%\totpatch"
 mkdir out
 cd out
-%civmain%\i5comp x ..\data1.cab
+"%civmain%\i5comp.exe" x "%civmain%\totpatch\data1.cab"
 xcopy /S /C /H /R /Y *.* "%CivPath%\Test of Time" 
 cd \
 pushd "%CIVMAIN%" || exit /b 1
-%civmain%\7z.exe e totTTP.7z -o%civmain%\totTTP -y
-cd totTTP
+"%civmain%\7z.exe" e "%civmain%\totTTP.7z" -o"%civmain%\totTTP" -y
+cd "%civmain%\totTTP"
 mkdir out
 cd out
-%civmain%\i5comp x ..\data1.cab
+"%civmain%\i5comp.exe" x "%civmain%\totTTP\data1.cab"
 xcopy /S /C /H /R /Y *.* "%CivPath%\Test of Time"
 cd \
 pushd "%CIVMAIN%" || exit /b 1

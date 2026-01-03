@@ -12,8 +12,9 @@ for /f "usebackq delims=" %%i in ("%CIVMAIN%\Setup.ini") do set "%%i"
 set "civmain=%CIVMAIN%"
 cls
 
-mkdir "%CivPath%\common\extras"
-%civmain%\7z.exe x extras.7z -o"%CivPath%\common\extras" -y
+mkdir "%CivPath%\common\extras". 
+cd "%civmain%
+"%civmain%\7z.exe" x extras.7z -o"%CivPath%\common\extras" -y
 echo Extra's Installed...
 
 timeout 5

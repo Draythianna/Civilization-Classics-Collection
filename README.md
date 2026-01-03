@@ -121,6 +121,7 @@ Enjoy, special thanks to Apolyton.net, CivFanatics, and all the digital archives
 # Upcoming Plans
 
 -Bug fixing
+-More Scenarios/Total Conversions?
 
 # Credits
 
