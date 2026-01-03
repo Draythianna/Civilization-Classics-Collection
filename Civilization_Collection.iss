@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Civilization Classics Collection (Unofficial)"
-#define MyAppVersion "RC3.f1"
+#define MyAppVersion "RC3.f2"
 #define MyAppPublisher "MicroProse Software"
 #define MyAppURL "https://civilization.2k.com/civ/"
 #define MyAppName1="CivWin"
