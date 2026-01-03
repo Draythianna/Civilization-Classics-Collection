@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Civilization Classics Collection (Unofficial)"
-#define MyAppVersion "RC3.f3"
+#define MyAppVersion "RC3.f4"
 #define MyAppPublisher "MicroProse Software"
 #define MyAppURL "https://civilization.2k.com/civ/"
 #define MyAppName1="CivWin"
@@ -407,8 +407,8 @@ Name: "{app}\CIVWIN"; Flags: uninsalwaysuninstall
 Name: "{app}\CIVNET"; Flags: uninsalwaysuninstall
 Name: "{app}\Test of Time\BESTONETX"; Flags: uninsalwaysuninstall
 Name: "{app}\Civilization II Multiplayer Gold Edition\SCENARIO"; Flags: uninsalwaysuninstall
-Name: "{app}\Civilization II Multiplayer Gold Edition\SCENARIO\BESTONET3"; Flags: uninsalwaysuninstall
-Name: "{app}\Civilization II Multiplayer Gold Edition\SCENARIO\BESTONETX"; Flags: uninsalwaysuninstall
+Name: "{app}\Civilization II Multiplayer Gold Edition\SCENARIO\BESTNET3"; Flags: uninsalwaysuninstall
+Name: "{app}\Civilization II Multiplayer Gold Edition\SCENARIO\BESTNETX"; Flags: uninsalwaysuninstall
 
 [Code]
 
