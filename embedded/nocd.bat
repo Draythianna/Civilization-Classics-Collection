@@ -16,6 +16,7 @@ REM Helper: select xdelta executable
 REM   - If force32.txt exists, prefer 32-bit xdelta
 REM   - Else prefer 64-bit xdelta when available
 REM --------------------------------------------------
+set "civmain=%CIVMAIN%"
 set "XDELTA32=%civmain%\xdelta3-3.0.11-i686.exe"
 set "XDELTA64=%civmain%\xdelta3-3.0.11-x86_64.exe"
 set "XDELTA_EXE="
@@ -24,12 +25,11 @@ if exist "%XDELTA32%" set "XDELTA_EXE=%XDELTA32%"
 if exist "%XDELTA64%" set "XDELTA_EXE=%XDELTA64%"
 if exist "%CivPath%\common\force32.txt" set "XDELTA_EXE=%XDELTA32%"
 
-
 :main
-set "civmain=%CIVMAIN%"
 echo "Workspace %CIVMAIN%"
 echo "CivPath %CivPath%"
 cd "%civmain%"
+
 REM --------------------------------------------------
 REM Choose which NoCD routine to run based on marker files
 REM --------------------------------------------------
@@ -41,29 +41,40 @@ echo "No marker found (FULL.TXT/CIV2MGE.TXT/CIV2TOT.TXT). Nothing to do."
 goto end
 
 :civ2mge
-cd "%CivPath%\Civilization II Multiplayer Gold Edition\"
+cd "%CivPath%\Civilization II Multiplayer Gold Edition"
 echo y | copy "%CivPath%\Civilization II Multiplayer Gold Edition\civ2.exe" "%CivPath%\Civilization II Multiplayer Gold Edition\civ2.nocd.bak"
-if exist "%CivPath%\common\force32.txt" "%XDELTA_EXE%" -f -v -v -d -s civ2.exe "%civmain%\mgenocd.diff" civ2.nocd.exe
-if not exist "%CivPath%\common\force32.txt" "%XDELTA_EXE%" -f -v -v -d -s civ2.exe "%civmain%\mgenocd.diff" civ2.nocd.exe
-cd\
+
+if exist "%CivPath%\common\force32.txt" (
+    "%XDELTA_EXE%" -f -v -v -d -s "civ2.exe" "%civmain%\mgenocd.diff" "civ2.nocd.exe"
+) else (
+    "%XDELTA_EXE%" -f -v -v -d -s "civ2.exe" "%civmain%\mgenocd.diff" "civ2.nocd.exe"
+)
+
+cd \
+goto end
 
 :civ2tot
 cd "%CivPath%\Test of Time"
 echo y | copy "%CivPath%\Test of Time\civ2.exe" "%CivPath%\Test of Time\civ2.nocd.bak"
-if exist "%CivPath%\common\force32.txt" "%XDELTA_EXE%" -f -v -v -d -s civ2.exe "%civmain%\totnocd.diff" civ2.nocd.exe
-if not exist "%CivPath%\common\force32.txt" "%XDELTA_EXE%" -f -v -v -d -s civ2.exe "%civmain%\totnocd.diff" civ2.nocd.exe
-cd\
+
+if exist "%CivPath%\common\force32.txt" (
+    "%XDELTA_EXE%" -f -v -v -d -s "civ2.exe" "%civmain%\totnocd.diff" "civ2.nocd.exe"
+) else (
+    "%XDELTA_EXE%" -f -v -v -d -s "civ2.exe" "%civmain%\totnocd.diff" "civ2.nocd.exe"
+)
+
+cd \
 goto end
 
 :full
-echo y | copy "%CivPath%\Civilization II Multiplayer Gold Edition\civ2.exe" "%CivPath%\Civilization II Multiplayer Gold Edition\civ2.nocd.bak"
-if exist "%CivPath%\common\force32.txt" "%XDELTA_EXE%" -f -v -v -d -s civ2.exe "%civmain%\mgenocd.diff" civ2.nocd.exe
-if not exist "%CivPath%\common\force32.txt" "%XDELTA_EXE%" -f -v -v -d -s civ2.exe "%civmain%\mgenocd.diff" civ2.nocd.exe
 cd "%CivPath%\Civilization II Multiplayer Gold Edition"
-cd\
+echo y | copy "%CivPath%\Civilization II Multiplayer Gold Edition\civ2.exe" "%CivPath%\Civilization II Multiplayer Gold Edition\civ2.nocd.bak"
+
+"%XDELTA_EXE%" -f -v -v -d -s "civ2.exe" "%civmain%\mgenocd.diff" "civ2.nocd.exe"
+
 cd "%CivPath%\Test of Time"
-if exist "%CivPath%\common\force32.txt" "%XDELTA_EXE%" -f -v -v -d -s civ2.exe "%civmain%\totnocd.diff" civ2.nocd.exe
-if not exist "%CivPath%\common\force32.txt" "%XDELTA_EXE%" -f -v -v -d -s civ2.exe "%civmain%\totnocd.diff" civ2.nocd.exe
+"%XDELTA_EXE%" -f -v -v -d -s "civ2.exe" "%civmain%\totnocd.diff" "civ2.nocd.exe"
+
 goto end
 
 :end

@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Civilization Classics Collection (Unofficial)"
-#define MyAppVersion "RC3.f0"
+#define MyAppVersion "RC3.f1"
 #define MyAppPublisher "MicroProse Software"
 #define MyAppURL "https://civilization.2k.com/civ/"
 #define MyAppName1="CivWin"
@@ -59,6 +59,7 @@ Source: "embedded\Audio\AudioFile.mp3"; Flags: dontcopy; Components: Common
 Source: "patch\mgepatch.7z"; Flags: dontcopy; Components: Common\Tasks\Update\Update
 Source: "patch\totpatch.7z"; Flags: dontcopy; Components: Common\Tasks\Update\Update
 Source: "patch\totTTP.7z"; Flags: dontcopy; Components: Common\Tasks\Update\Update
+Source: "patch\XDaemon.dll"; Flags: dontcopy; Components: Common\Tasks\Update\Update
 Source: "embedded\LICENSE.txt"; DestDir: "{app}\common\"; DestName: "FULL.txt"; Flags: ignoreversion; Components: Install\FULL
 Source: "embedded\LICENSE.txt"; DestDir: "{app}\common"; DestName: "CIV1.txt"; Flags: ignoreversion; Components: Install\Custom\CIV1
 Source: "embedded\LICENSE.txt"; DestDir: "{app}\common"; DestName: "CIVNET.txt"; Flags: ignoreversion; Components: Install\Custom\CIVNET
@@ -611,6 +612,7 @@ ExtractToWorkDirFlat('Civ2UIA.v1.21.5.2785.zip');
 ExtractToWorkDirFlat('Civ2x64EditboxPatcher.exe');
 ExtractToWorkDirFlat('civ2xp64patcher.zip');
 ExtractToWorkDirFlat('TOTPPv018.4.zip');
+ExtractToWorkDirFlat('XDaemon.dll');
 
 ExtractToWorkDirFlat('mgenocd.diff');
 ExtractToWorkDirFlat('mgepatched64.diff');
