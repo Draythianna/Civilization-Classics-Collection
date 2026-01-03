@@ -92,6 +92,7 @@ rmdir C:\mps
 cd ..
 rd /S /Q "%CivPath%\CIVWIN\TMP\CivWin3.1"
 rd /s /q "%CivPath%\CIVWIN\TMP"
+rmdir "%CivPath%\CIVWIN\CIVWIN"
 echo Civ1 Installed....
 timeout 5
 if exist "%CivPath%\common\FULL.TXT" goto civnet
@@ -112,6 +113,7 @@ echo D|xcopy /S /C /H /R /Y C:\mps\CIVWIN\*.* .
 rd /S /Q C:\mps\CIVWIN
 rmdir C:\mps
 rmdir "%CivPath%\CIVWIN\CivWin3.1"
+rmdir "%CivPath%\CIVWIN\CIVWIN"
 echo Civ1 Installed...
 timeout 5
 if exist "%CivPath%\common\FULL.TXT" goto civnet
