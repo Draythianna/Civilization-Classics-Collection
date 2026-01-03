@@ -51,7 +51,7 @@ cd "%civmain%"
 echo y | copy "Civ2x64EditboxPatcher.exe" "%CivPath%\Civilization II Multiplayer Gold Edition\"
 "%civmain%\7z.exe" x "Civ2MGE_v19.7z" -o"%CivPath%\Civilization II Multiplayer Gold Edition\" -y
 "%civmain%\7z.exe" x "TOTPPv018.4.zip" -o"%CivPath%\Test of Time\" -y
-"%civmain%\7z.exe" x "ExtendedMusicForTOTPP.7z" -o"%CivPath%\Test of Time\" -y
+"%civmain%\7z.exe" x "ExtendedMusic.7z" -o"%CivPath%\Test of Time\" -y
 "%civmain%\7z.exe" e "90936-tot_corrected_dlls.rar" -o"%CivPath%\Test of Time\" -y
 rd /s /q "%CivPath%\Test of Time\ToT corrected DLLs\"
 
@@ -123,7 +123,7 @@ goto end
 cd "%civmain%"
 "%civmain%\7z.exe" e "90936-tot_corrected_dlls.rar" -o"%CivPath%\Test of Time\" -y
 "%civmain%\7z.exe" x "TOTPPv018.4.zip" -o"%CivPath%\Test of Time\" -y
-"%civmain%\7z.exe" x "ExtendedMusicForTOTPP.7z" -o"%CivPath%\Test of Time\" -y
+"%civmain%\7z.exe" x "ExtendedMusic.7z" -o"%CivPath%\Test of Time\" -y
 rd /s /q "%CivPath%\Test of Time\ToT corrected DLLs\"
 
 cd "%CivPath%\Test of Time"
