@@ -364,6 +364,7 @@ Source: "patch\diff\civmapsmallmaps.diff"; Flags: dontcopy; Components: Common\T
 Source: "patch\extras\extras.7z"; Flags: dontcopy; Components: Common\Tasks\Update\Extras
 Source: "patch\manual_fixes\ExtendedMusic.7z"; Flags: dontcopy; Components: Common\Tasks\Update\Modern\Fixes
 Source: "patch\manual_fixes\Civ2MGE_v19.7z"; Flags: dontcopy; Components: Common\Tasks\Update\Modern\Fixes
+Source: "patch\manual_fixes\ExtendedMusicForTOTPP.7z"; Flags: dontcopy; Components: Common\Tasks\Update\Modern\Fixes
 
 [UninstallRun]
 Filename: "reg.exe"; Parameters: "import ExpandConstant('{sd}') + '\OTVDM\uninstall.reg'"; Flags: shellexec
