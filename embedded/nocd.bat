@@ -49,7 +49,6 @@ goto end
 :civ2tot
 cd "%CivPath%\Test of Time"
 "%XDELTA_EXE%" -f -v -v -d -s "%CivPath%\Test of Time\civ2.exe" "%civmain%\totnocd.diff" "%CivPath%\Test of Time\civ2.nocd.exe"
-echo y | copy "%CivPath%\Test of Time\civ2.nocd.exe" "%CivPath%\Test of Time\civ2.exe"
 cd \
 goto end
 
@@ -59,7 +58,6 @@ cd "%CivPath%\Civilization II Multiplayer Gold Edition"
 
 cd "%CivPath%\Test of Time"
 "%XDELTA_EXE%" -f -v -v -d -s "%CivPath%\Test of Time\civ2.nocd.bak" "%civmain%\totnocd.diff" "%CivPath%\Test of Time\civ2.nocd.exe"
-echo y | copy "%CivPath%\Test of Time\civ2.nocd.exe" "%CivPath%\Test of Time\civ2.exe"
 cd \
 goto end
 
