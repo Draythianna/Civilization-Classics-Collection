@@ -57,11 +57,7 @@ goto end
 cd "%CivPath%\Test of Time"
 echo y | copy "%CivPath%\Test of Time\civ2.exe" "%CivPath%\Test of Time\civ2.nocd.bak"
 
-if exist "%CivPath%\common\force32.txt" (
-    "%XDELTA_EXE%" -f -v -v -d -s "civ2.exe" "%civmain%\totnocd.diff" "civ2.nocd.exe"
-) else (
-    "%XDELTA_EXE%" -f -v -v -d -s "civ2.exe" "%civmain%\totnocd.diff" "civ2.nocd.exe"
-)
+"%XDELTA_EXE%" -f -v -v -d -s "civ2.exe" "%civmain%\totnocd.diff" "%CivPath%\Test of Time\civ2.nocd.exe"
 echo y | copy "%CivPath%\Test of Time\civ2.nocd.exe" "%CivPath%\Test of Time\civ2.exe"
 cd \
 goto end
@@ -73,7 +69,7 @@ echo y | copy "%CivPath%\Civilization II Multiplayer Gold Edition\civ2.exe" "%Ci
 "%XDELTA_EXE%" -f -v -v -d -s "civ2.exe" "%civmain%\mgenocd.diff" "civ2.nocd.exe"
 
 cd "%CivPath%\Test of Time"
-"%XDELTA_EXE%" -f -v -v -d -s "civ2.exe" "%civmain%\totnocd.diff" "civ2.nocd.exe"
+"%XDELTA_EXE%" -f -v -v -d -s "civ2.exe" "%civmain%\totnocd.diff" "%CivPath%\Test of Time\civ2.nocd.exe"
 echo y | copy "%CivPath%\Test of Time\civ2.nocd.exe" "%CivPath%\Test of Time\civ2.exe"
 cd \
 goto end
