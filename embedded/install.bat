@@ -56,7 +56,8 @@ echo y | copy "Civ2x64EditboxPatcher.exe" "%CivPath%\Civilization II Multiplayer
 rd /s /q "%CivPath%\Test of Time\ToT corrected DLLs\"
 
 cd "%CivPath%\Civilization II Multiplayer Gold Edition"
-echo y | copy "%CivPath%\Civilization II Multiplayer Gold Edition\civ.exe" "%CivPath%\Civilization II Multiplayer Gold Edition\civ.bak"
+echo y | copy "%CivPath%\Civilization II Multiplayer Gold Edition\civ2.exe" "%CivPath%\Civilization II Multiplayer Gold Edition\civ2.nocd.bak"
+echo y | copy "%CivPath%\Civilization II Multiplayer Gold Edition\civ2.exe" "%CivPath%\Civilization II Multiplayer Gold Edition\civ2.bak"
 echo y | copy "%CivPath%\Civilization II Multiplayer Gold Edition\Civ2Map.exe" "%CivPath%\Civilization II Multiplayer Gold Edition\Civ2Map.bak"
 
 mkdir "%CivPath%\Civilization II Multiplayer Gold Edition\Right_mouse_click"
@@ -79,6 +80,7 @@ echo y | copy "Right_mouse_click\civ2.rightclick.exe" "civ2.rightclick.exe"
 
 cd \
 cd "%CivPath%\Test of Time"
+echo y | copy "%CivPath%\Test of Time\civ2.exe" "%CivPath%\Test of Time\civ2.nocd.bak"
 "%XDELTA_EXE%" -v -v -f -d -s "civ2.exe" "%civmain%\totpatched64.diff" "civ2.x64.exe"
 "%XDELTA_EXE%" -v -v -f -d -s "civ2.exe" "%civmain%\civ2tot.diff" "civ2.fixes.exe"
 "%XDELTA_EXE%" -v -v -f -d -s "civ2.exe" "%civmain%\civ2tot.diff" "civ2.fixes.exe"
@@ -98,7 +100,8 @@ mkdir "%CivPath%\Civilization II Multiplayer Gold Edition\Right_mouse_click"
 mkdir "%CivPath%\Civilization II Multiplayer Gold Edition\Without_very_large_maps"
 
 cd "%CivPath%\Civilization II Multiplayer Gold Edition"
-echo y | copy "%CivPath%\Civilization II Multiplayer Gold Edition\civ.exe" "%CivPath%\Civilization II Multiplayer Gold Edition\civ.bak"
+echo y | copy "%CivPath%\Civilization II Multiplayer Gold Edition\civ2.exe" "%CivPath%\Civilization II Multiplayer Gold Edition\civ2.nocd.bak"
+echo y | copy "%CivPath%\Civilization II Multiplayer Gold Edition\civ2.exe" "%CivPath%\Civilization II Multiplayer Gold Edition\civ2.bak"
 echo y | copy "%CivPath%\Civilization II Multiplayer Gold Edition\Civ2Map.exe" "%CivPath%\Civilization II Multiplayer Gold Edition\Civ2Map.bak"
 cd "%CivPath%\Civilization II Multiplayer Gold Edition"
 "%XDELTA_EXE%" -v -v -f -d -s "Civ2Map.exe" "%civmain%\Civ2Map.diff" "Civ2Map.fixes.exe"
@@ -127,6 +130,7 @@ cd "%civmain%"
 rd /s /q "%CivPath%\Test of Time\ToT corrected DLLs\"
 
 cd "%CivPath%\Test of Time"
+echo y | copy "%CivPath%\Test of Time\civ2.exe" "%CivPath%\Test of Time\civ2.nocd.bak"
 "%XDELTA_EXE%" -v -v -f -d -s "civ2.exe" "%civmain%\civ2tot.diff" "civ2.fixes.exe"
 "%XDELTA_EXE%" -v -v -f -d -s "civ2.exe" "%civmain%\civ2tot.diff" "civ2.fixes.exe"
 echo y | copy "%CivPath%\Test of Time\civ2.fixes.exe" "%CivPath%\Test of Time\civ2.exe"

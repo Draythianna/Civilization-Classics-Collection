@@ -42,14 +42,12 @@ goto end
 
 :civ2mge
 cd "%CivPath%\Civilization II Multiplayer Gold Edition"
-echo y | copy "%CivPath%\Civilization II Multiplayer Gold Edition\civ2.exe" "%CivPath%\Civilization II Multiplayer Gold Edition\civ2.nocd.bak"
-"%XDELTA_EXE%" -f -v -v -d -s "%CivPath%\Civilization II Multiplayer Gold Edition\civ2.exe" "%civmain%\mgenocd.diff" "civ2.nocd.exe"
+"%XDELTA_EXE%" -f -v -v -d -s "%CivPath%\Civilization II Multiplayer Gold Edition\civ2.nocd.bak" "%civmain%\mgenocd.diff" "civ2.nocd.exe"
 cd \
 goto end
 
 :civ2tot
 cd "%CivPath%\Test of Time"
-echo y | copy "%CivPath%\Test of Time\civ2.exe" "%CivPath%\Test of Time\civ2.nocd.bak"
 "%XDELTA_EXE%" -f -v -v -d -s "%CivPath%\Test of Time\civ2.exe" "%civmain%\totnocd.diff" "%CivPath%\Test of Time\civ2.nocd.exe"
 echo y | copy "%CivPath%\Test of Time\civ2.nocd.exe" "%CivPath%\Test of Time\civ2.exe"
 cd \
@@ -57,11 +55,10 @@ goto end
 
 :full
 cd "%CivPath%\Civilization II Multiplayer Gold Edition"
-echo y | copy "%CivPath%\Civilization II Multiplayer Gold Edition\civ2.exe" "%CivPath%\Civilization II Multiplayer Gold Edition\civ2.nocd.bak"
 "%XDELTA_EXE%" -f -v -v -d -s "%CivPath%\Civilization II Multiplayer Gold Edition\civ2.exe" "%civmain%\mgenocd.diff" "civ2.nocd.exe"
 
 cd "%CivPath%\Test of Time"
-"%XDELTA_EXE%" -f -v -v -d -s "%CivPath%\Test of Time\civ2.exe" "%civmain%\totnocd.diff" "%CivPath%\Test of Time\civ2.nocd.exe"
+"%XDELTA_EXE%" -f -v -v -d -s "%CivPath%\Test of Time\civ2.nocd.bak" "%civmain%\totnocd.diff" "%CivPath%\Test of Time\civ2.nocd.exe"
 echo y | copy "%CivPath%\Test of Time\civ2.nocd.exe" "%CivPath%\Test of Time\civ2.exe"
 cd \
 goto end
