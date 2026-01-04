@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Civilization Classics Collection (Unofficial)"
-#define MyAppVersion "RC3.f4"
+#define MyAppVersion "RC3.f5"
 #define MyAppPublisher "MicroProse Software"
 #define MyAppURL "https://civilization.2k.com/civ/"
 #define MyAppName1="CivWin"
@@ -1282,6 +1282,19 @@ begin
    begin
    MsgBox('InitializeSetup:' #13#13 'Installing Modern Game Fixes!!', mbConfirmation, MB_OK);
    if ShellExec('open', 'cmd.exe', '/C ' + '%commonappdata%\Temp\CivTemp\install.bat','', SW_SHOW, ewWaitUntilTerminated, ResultCode2) then
+      begin
+        Log('Succeeded running batch file');
+      end
+    else
+      begin
+        Log('Failed running batch file');
+      end;
+   end;
+
+   If IsComponentSelected('Common\Tasks\Update\Modern\Fixes') then
+   begin
+   MsgBox('InitializeSetup:' #13#13 'Installing NoCD-ROM fixes!!', mbConfirmation, MB_OK);
+   if ShellExec('open', 'cmd.exe', '/C ' + '%commonappdata%\Temp\CivTemp\nocd.bat','', SW_SHOW, ewWaitUntilTerminated, ResultCode2) then
       begin
         Log('Succeeded running batch file');
       end

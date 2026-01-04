@@ -62,7 +62,7 @@ if exist "%CivPath%\common\force32.txt" (
 ) else (
     "%XDELTA_EXE%" -f -v -v -d -s "civ2.exe" "%civmain%\totnocd.diff" "civ2.nocd.exe"
 )
-
+echo y | copy "%CivPath%\Test of Time\civ2.nocd.exe" "%CivPath%\Test of Time\civ2.exe"
 cd \
 goto end
 
@@ -74,7 +74,8 @@ echo y | copy "%CivPath%\Civilization II Multiplayer Gold Edition\civ2.exe" "%Ci
 
 cd "%CivPath%\Test of Time"
 "%XDELTA_EXE%" -f -v -v -d -s "civ2.exe" "%civmain%\totnocd.diff" "civ2.nocd.exe"
-
+echo y | copy "%CivPath%\Test of Time\civ2.nocd.exe" "%CivPath%\Test of Time\civ2.exe"
+cd \
 goto end
 
 :end
