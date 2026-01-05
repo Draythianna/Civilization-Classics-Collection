@@ -122,6 +122,7 @@ Enjoy, special thanks to Apolyton.net, CivFanatics, and all the digital archives
 
 -Bug fixing
 -More Scenarios/Total Conversions?
+-Less Prompts, More Helpful Hints, Less Confusing Install order
 
 # Credits
 
