@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Civilization Classics Collection (Unofficial)"
-#define MyAppVersion "RC4.f0"
+#define MyAppVersion "RC4.f1"
 #define MyAppPublisher "MicroProse Software"
 #define MyAppURL "https://civilization.2k.com/civ/"
 #define MyAppName1="CivWin"
@@ -378,20 +378,33 @@ Type: files; Name: "{app}\common\FULL.txt"; BeforeInstall: InitializeWizard
 Type: files; Name: "{app}\common\PATCH.txt"; BeforeInstall: InitializeWizard
 
 [Run]
-Filename: "{cmd}"; Parameters: "/c """"{sys}\InfDefaultInstall.exe"""" """"{src}\OTVDM\installw.inf"""""; Flags: runhidden waituntilterminated 64bit; Description: "Install 16-bit Compatibility Layer"; Check: IsComponentSelected('Common\Tasks\Update\Compatibility\OTVDM')
-Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{src}\ExtendedMusic.7z"" -o""{app}\CIVWIN"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Install Civilization I Extended Music"; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ1\Music') and FileExists(ExpandConstant('{src}\ExtendedMusic.7z'))
-Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{src}\Civ1_Win_Soundtrack_Overhaul_Mod.7z"" -o""{app}\CIVWIN"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Civilization 1 Soundtrack Overhaul"; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ1\Music') and FileExists(ExpandConstant('{src}\Civ1_Win_Soundtrack_Overhaul_Mod.7z'))
-Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{src}\civ1scenarios.7z"" -o""{app}\CIVWIN"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Install Civilization I Scenarios"; Check: IsComponentSelected('Common\Tasks\Update\Scenarios\Civ1') and FileExists(ExpandConstant('{src}\civ1scenarios.7z'))
-Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{src}\CivWinSNES_WIP3A.zip"" -o""{app}\CIVWIN"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Civilization 1 SNES Graphics"; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ1\SNES') and FileExists(ExpandConstant('{src}\CivWinSNES_WIP3A.zip'))
-Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{src}\CivWin_PC98Tileset.zip"" -o""{app}\CIVWIN"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Civilization 1 PC-9801 Graphics"; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ1\PC98') and FileExists(ExpandConstant('{src}\CivWin_PC98Tileset.zip'))
-Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{src}\civdata4.zip"" -o""{app}\CIVWIN"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Civilization 1 MS-DOS Graphics"; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ1\DOS') and FileExists(ExpandConstant('{src}\civdata4.zip'))
-Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{src}\CivNet-102-WSPatch.zip"" -o""{app}\CIVNET"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "CivNet Widescreen Support"; Check: IsComponentSelected('Common\Tasks\Update\Mods\CivNet\WS') and FileExists(ExpandConstant('{src}\CivNet-102-WSPatch.zip'))
-Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{src}\CivNetDOSTilesBeta4.zip"" -o""{app}\CIVNET"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "CivNet MS-DOS Tileset Graphics"; Check: IsComponentSelected('Common\Tasks\Update\Mods\CivNet\DOS') and FileExists(ExpandConstant('{src}\CivNetDOSTilesBeta4.zip'))
-Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{src}\Civ1ModDemake.7z"" -o""{app}\Civilization II Multiplayer Gold Edition"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Civilization II LowRes Demake"; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ2\LowRes') and FileExists(ExpandConstant('{src}\Civ1ModDemake.7z'))
-Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{src}\HiResv24.7z"" -o""{app}\Civilization II Multiplayer Gold Edition"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Civilization II Hi-Res Graphics"; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ2\HiRes') and FileExists(ExpandConstant('{src}\HiResv24.7z'))
-Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{src}\MGEgfx.zip"" -o""{app}\Test of Time"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Civilization Test of Time MGE Graphics"; Check: IsComponentSelected('Common\Tasks\Update\Mods\CivTot\MGEGfx') and FileExists(ExpandConstant('{src}\MGEgfx.zip'))
-Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{src}\BESTONETX.7z"" -o""{app}\Test of Time\BESTONETX"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Civilization II Test of Time Scenarios"; Check: IsComponentSelected('Common\Tasks\Update\Scenarios\CivToT') and FileExists(ExpandConstant('{src}\BESTONETX.7z'))
-Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{src}\SCENARIO.7z"" -o""{app}\Civilization II Multiplayer Gold Edition\SCENARIO"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Civilization II Multiplayer Gold Edition Scenarios"; Check: IsComponentSelected('Common\Tasks\Update\Scenarios\Civ2') and FileExists(ExpandConstant('{src}\SCENARIO.7z'))
+Filename: "{cmd}"; Parameters: "/c """"{sys}\InfDefaultInstall.exe"""" """"{commonappdata}\Temp\CivTemp\OTVDM\installw.inf"""""; Flags: runhidden waituntilterminated 64bit; Description: "Install 16-bit Compatibility Layer"; Check: IsComponentSelected('Common\Tasks\Update\Compatibility\OTVDM')
+
+Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{commonappdata}\Temp\CivTemp\ExtendedMusic.7z"" -o""{app}\CIVWIN"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Install Civilization I Extended Music"; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ1\Music') and FileExists(ExpandConstant('{commonappdata}\Temp\CivTemp\ExtendedMusic.7z'))
+
+Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{commonappdata}\Temp\CivTemp\Civ1_Win_Soundtrack_Overhaul_Mod.7z"" -o""{app}\CIVWIN"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Civilization 1 Soundtrack Overhaul"; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ1\Music') and FileExists(ExpandConstant('{commonappdata}\Temp\CivTemp\Civ1_Win_Soundtrack_Overhaul_Mod.7z'))
+
+Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{commonappdata}\Temp\CivTemp\civ1scenarios.7z"" -o""{app}\CIVWIN"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Install Civilization I Scenarios"; Check: IsComponentSelected('Common\Tasks\Update\Scenarios\Civ1') and FileExists(ExpandConstant('{commonappdata}\Temp\CivTemp\civ1scenarios.7z'))
+
+Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{commonappdata}\Temp\CivTemp\CivWinSNES_WIP3A.zip"" -o""{app}\CIVWIN"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Civilization 1 SNES Graphics"; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ1\SNES') and FileExists(ExpandConstant('{commonappdata}\Temp\CivTemp\CivWinSNES_WIP3A.zip'))
+
+Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{commonappdata}\Temp\CivTemp\CivWin_PC98Tileset.zip"" -o""{app}\CIVWIN"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Civilization 1 PC-9801 Graphics"; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ1\PC98') and FileExists(ExpandConstant('{commonappdata}\Temp\CivTemp\CivWin_PC98Tileset.zip'))
+
+Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{commonappdata}\Temp\CivTemp\civdata4.zip"" -o""{app}\CIVWIN"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Civilization 1 MS-DOS Graphics"; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ1\DOS') and FileExists(ExpandConstant('{commonappdata}\Temp\CivTemp\civdata4.zip'))
+
+Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{commonappdata}\Temp\CivTemp\CivNet-102-WSPatch.zip"" -o""{app}\CIVNET"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "CivNet Widescreen Support"; Check: IsComponentSelected('Common\Tasks\Update\Mods\CivNet\WS') and FileExists(ExpandConstant('{commonappdata}\Temp\CivTemp\CivNet-102-WSPatch.zip'))
+
+Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{commonappdata}\Temp\CivTemp\CivNetDOSTilesBeta4.zip"" -o""{app}\CIVNET"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "CivNet MS-DOS Tileset Graphics"; Check: IsComponentSelected('Common\Tasks\Update\Mods\CivNet\DOS') and FileExists(ExpandConstant('{commonappdata}\Temp\CivTemp\CivNetDOSTilesBeta4.zip'))
+
+Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{commonappdata}\Temp\CivTemp\Civ1ModDemake.7z"" -o""{app}\Civilization II Multiplayer Gold Edition"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Civilization II LowRes Demake"; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ2\LowRes') and FileExists(ExpandConstant('{commonappdata}\Temp\CivTemp\Civ1ModDemake.7z'))
+
+Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{commonappdata}\Temp\CivTemp\HiResv24.7z"" -o""{app}\Civilization II Multiplayer Gold Edition"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Civilization II Hi-Res Graphics"; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ2\HiRes') and FileExists(ExpandConstant('{commonappdata}\Temp\CivTemp\HiResv24.7z'))
+
+Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{commonappdata}\Temp\CivTemp\MGEgfx.zip"" -o""{app}\Test of Time"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Civilization Test of Time MGE Graphics"; Check: IsComponentSelected('Common\Tasks\Update\Mods\CivTot\MGEGfx') and FileExists(ExpandConstant('{commonappdata}\Temp\CivTemp\MGEgfx.zip'))
+
+Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{commonappdata}\Temp\CivTemp\BESTONETX.7z"" -o""{app}\Test of Time\BESTONETX"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Civilization II Test of Time Scenarios"; Check: IsComponentSelected('Common\Tasks\Update\Scenarios\CivToT') and FileExists(ExpandConstant('{commonappdata}\Temp\CivTemp\BESTONETX.7z'))
+
+Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{commonappdata}\Temp\CivTemp\SCENARIO.7z"" -o""{app}\Civilization II Multiplayer Gold Edition\SCENARIO"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Civilization II Multiplayer Gold Edition Scenarios"; Check: IsComponentSelected('Common\Tasks\Update\Scenarios\Civ2') and FileExists(ExpandConstant('{commonappdata}\Temp\CivTemp\SCENARIO.7z'))
 
 [INI]
 Filename: "{commonappdata}\Temp\CivTemp\Setup.ini"; Section: "Install"; Key: "Civ1ISO"; String: "{code:GetCiv1ISO}"

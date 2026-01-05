@@ -308,7 +308,7 @@ move "TMP\*.mp3" "Music\"
 mkdir VIDEO
 echo D|xcopy /S /C /H /R /Y "TMP\Civ2\VIDEO\*.*" "VIDEO\"
 move "Music\TRACK02.mp3" "Music\Funeral March.mp3"
-move "Music\TRACK03.mp3" "Music\Ode To Joy.mp3"
+move "Music\TRACK03.mp3" "Music\Ode to Joy.mp3"
 move "Music\TRACK04.mp3" "Music\Crusade.mp3"
 move "Music\TRACK05.mp3" "Music\Alien.mp3"
 move "Music\TRACK06.mp3" "Music\Mongol Horde.mp3"
