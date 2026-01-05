@@ -3,7 +3,7 @@
 
 #define MyAppName "Civilization Classics Collection (Unofficial)"
 #define MyAppVersion "RC4.f0"
-#define MyAppPublisher "MicroProse"
+#define MyAppPublisher "MicroProse Software"
 #define MyAppURL "https://civilization.2k.com/civ/"
 #define MyAppName1="CivWin"
 #define MyAppName2="CivNet"
