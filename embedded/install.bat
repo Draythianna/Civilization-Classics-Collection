@@ -85,6 +85,9 @@ echo y | copy "%CivPath%\Test of Time\civ2.exe" "%CivPath%\Test of Time\civ2.noc
 "%XDELTA_EXE%" -v -v -f -d -s "civ2.exe" "%civmain%\civ2tot.diff" "civ2.fixes.exe"
 "%XDELTA_EXE%" -v -v -f -d -s "civ2.exe" "%civmain%\civ2tot.diff" "civ2.fixes.exe"
 echo y | copy "%CivPath%\Test of Time\civ2.fixes.exe" "%CivPath%\Test of Time\civ2.exe"
+echo y | copy "%CivPath%\CivNet\civ.exe" "%CivPath%\CivNet\civ.bak"
+"%XDELTA_EXE%" -v -v -f -d -s "civ.exe" "%civmain%\civnet.diff" "civ.ws.exe"
+echo y | copy "%CivPath%\CivNet\civ.ws.exe" "%CivPath%\CivNet\civ.exe"
 goto end
 
 :multi
@@ -135,6 +138,16 @@ echo y | copy "%CivPath%\Test of Time\civ2.exe" "%CivPath%\Test of Time\civ2.noc
 "%XDELTA_EXE%" -v -v -f -d -s "civ2.exe" "%civmain%\civ2tot.diff" "civ2.fixes.exe"
 echo y | copy "%CivPath%\Test of Time\civ2.fixes.exe" "%CivPath%\Test of Time\civ2.exe"
 "%XDELTA_EXE%" -v -v -f -d -s "civ2.exe" "%civmain%\totpatched64.diff" "civ2.x64.exe"
+goto multi3
+
+exist "%CivPath%\common\CIVNET.TXT" goto civnet
+goto end
+
+:civnet
+cd "%civmain%"
+echo y | copy "%CivPath%\CivNet\civ.exe" "%CivPath%\CivNet\civ.bak"
+"%XDELTA_EXE%" -v -v -f -d -s "civ.exe" "%civmain%\civnet.diff" "civ.ws.exe"
+echo y | copy "%CivPath%\CivNet\civ.ws.exe" "%CivPath%\CivNet\civ.exe"
 goto end
 
 :end
