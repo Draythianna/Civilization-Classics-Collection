@@ -2,7 +2,7 @@
 ; SEE THE DOCUMENTATION FOR DETAILS ON CREATING INNO SETUP SCRIPT FILES!
 
 #define MyAppName "Civilization Classics Collection (Unofficial)"
-#define MyAppVersion "RC4.f2"
+#define MyAppVersion "RC4.f3"
 #define MyAppPublisher "MicroProse Software"
 #define MyAppURL "https://civilization.2k.com/civ/"
 #define MyAppName1="CivWin"
@@ -389,7 +389,7 @@ Type: files; Name: "{app}\common\PATCH.txt"; BeforeInstall: InitializeWizard
 
 [Run]
 Filename: "{cmd}"; Parameters: "/c """"{sys}\InfDefaultInstall.exe"""" """"{commonappdata}\Temp\CivTemp\OTVDM\installw.inf"""""; Flags: runhidden waituntilterminated 64bit; Description: "Install 16-bit Compatibility Layer"; Check: IsComponentSelected('Common\Tasks\Update\Compatibility\OTVDM')
-Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{commonappdata}\Temp\CivTemp\ExtendedMusic.7z"" -o""{app}\CIVWIN"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Install Civilization 2 Extended Music"; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ2\Music') and FileExists(ExpandConstant('{commonappdata}\Temp\CivTemp\ExtendedMusic.7z'))
+Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{commonappdata}\Temp\CivTemp\ExtendedMusic.7z"" -o""{app}\Test of Time"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Install Civilization 2 Extended Music"; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ2\Music') and FileExists(ExpandConstant('{commonappdata}\Temp\CivTemp\ExtendedMusic.7z'))
 Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{commonappdata}\Temp\CivTemp\Civ1_Win_Soundtrack_Overhaul_Mod.7z"" -o""{app}\CIVWIN"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Civilization 1 Soundtrack Overhaul"; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ1\Music') and FileExists(ExpandConstant('{commonappdata}\Temp\CivTemp\Civ1_Win_Soundtrack_Overhaul_Mod.7z'))
 Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{commonappdata}\Temp\CivTemp\civ1scenarios.7z"" -o""{app}\CIVWIN"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Install Civilization I Scenarios"; Check: IsComponentSelected('Common\Tasks\Update\Scenarios\Civ1') and FileExists(ExpandConstant('{commonappdata}\Temp\CivTemp\civ1scenarios.7z'))
 Filename: "{cmd}"; Parameters: "/c """"{commonappdata}\Temp\CivTemp\7z.exe"" x ""{commonappdata}\Temp\CivTemp\CivWinSNES_WIP3A.zip"" -o""{app}\CIVWIN"" -y -aoa"""""; Flags: waituntilterminated runmaximized; Description: "Civilization 1 SNES Graphics"; Check: IsComponentSelected('Common\Tasks\Update\Mods\Civ1\SNES') and FileExists(ExpandConstant('{commonappdata}\Temp\CivTemp\CivWinSNES_WIP3A.zip'))
