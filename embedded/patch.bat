@@ -130,6 +130,8 @@ mkdir out
 cd out
 "%civmain%\i5comp.exe" x "%civmain%\totTTP\data1.cab"
 xcopy /S /C /H /R /Y "*.*" "%CivPath%\Test of Time"
+robocopy "%CivPath%\Test of Time\Somewhere in Time" "%CivPath%\Test of Time\Elsewhere in Time" /E /XC /XN /XO
+del "%CivPath%\Test of Time\Elsewhere in Time\Time.SCN"
 
 cd \
 pushd "%CIVMAIN%" || exit /b 1
